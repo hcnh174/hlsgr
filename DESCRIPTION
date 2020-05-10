@@ -16,3 +16,7 @@ Imports:
     ggplot2,
     dplyr,
     rlang
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
