@@ -6,7 +6,13 @@ Author: Nelson Hayes
 Maintainer: The package maintainer <nelsonhayes@hiroshima-u.ac.jp>
 Description: This package contains bioinformatics utilities for analysis
     of next generation sequencing and annotation of cancer genome reports.
-License: MIT
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
+Imports:
+    plyr,
+    R.oo,
+    ggplot2,
+    dplyr,
+    rlang
