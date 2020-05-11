@@ -17,5 +17,5 @@ Splits comma-delimited list and returns only genes found in GENESYMBOL list
 }
 \examples{
 hlsgr::splitGenes('ALK,NR1')#
-splitGenes(c('PIK3CA', 'APC', 'FGFR2'))
+hlsgr::splitGenes(c('PIK3CA', 'APC', 'FGFR2'))
 }

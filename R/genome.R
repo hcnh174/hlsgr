@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' hlsgr::splitGenes('ALK,NR1')#
-#' splitGenes(c('PIK3CA', 'APC', 'FGFR2'))
+#' hlsgr::splitGenes(c('PIK3CA', 'APC', 'FGFR2'))
 splitGenes <- function(values=character(0))
 {
   values <- splitFields(values)

@@ -1,0 +1,789 @@
+id	name	group	platform
+C00031	Glucose	Glycolysis	GCQQQ
+C00022	Pyruvic acid	Glycolysis	GCQQQ
+C00186	Lactic acid	Glycolysis	GCQQQ
+C00029	UDP-glucose	Glucose pathway	HILIC
+C06473	2-Dehydro-gluconic acid	PPP	HILIC
+C00257	Gluconic acid	PPP	GCQQQ
+C00158	Citric acid	TCA cycle	GCQQQ
+C00311	Isocitric acid	TCA cycle	HILIC
+C00026	2-Oxoglutaric acid	TCA cycle	GCQQQ
+C00042	Succinic acid	TCA cycle	HILIC
+C00122	Fumaric acid	TCA cycle	GCQQQ
+C00137	Inositol	Sugar related	GCQQQ
+C00124	Galactose	Sugar related	GCQQQ
+C00818	Glucaric acid	Sugar related	GCQQQ
+C00689	Trehalose-6-phosphate	Sugar related	GCQQQ
+C16245	Glucuronic acid	Sugar related	GCQQQ
+C02154	Glyceraldehyde	Sugar related	GCQQQ
+C00159	Mannose	Sugar related	GCQQQ
+C00794	Sorbitol	Sugar related	GCQQQ
+C00043	UDP-N-acetyl-glucosamine	Nucleotide sugar pathway	HILIC
+C00037	Glycine	Gly/Ser/Thr pathway	GCQQQ
+C00065	Serine	Gly/Ser/Thr pathway	GCQQQ
+C00188	Threonine	Gly/Ser/Thr pathway	GCQQQ
+C00114	Choline	Gly/Ser/Thr pathway	HILIC
+C01026	Dimethylglycine	Gly/Ser/Thr pathway	GCQQQ
+C00213	Sarcosine	Gly/Ser/Thr pathway	HILIC
+C00979	O-acetyl-serine	Gly/Ser/Thr pathway	GCQQQ
+C00109	2-Oxobutyric acid	Gly/Ser/Thr pathway	GCQQQ
+C00041	Alanine	Ala/Asp/Glu pathway	GCQQQ
+C00152	Asparagine	Ala/Asp/Glu pathway	GCQQQ
+C00064	Glutamine	Ala/Asp/Glu pathway	HILIC
+C00049	Aspartic acid	Ala/Asp/Glu pathway	GCQQQ
+C00025	Glutamic acid	Ala/Asp/Glu pathway	GCQQQ
+C00148	Proline	Arg/Pro pathway	GCQQQ
+C01157	4-Hydroxyproline	Arg/Pro pathway	HILIC
+C00062	Arginine	Arg/Pro pathway	HILIC
+C00077	Ornithine	Arg/Pro pathway	GCQQQ
+C00327	Citrulline	Arg/Pro pathway	GCQQQ
+C00086	Urea	Arg/Pro pathway	GCQQQ
+C00581	Guanidoacetic acid	Arg/Pro pathway	HILIC
+C00300	Creatine	Arg/Pro pathway	HILIC
+C02305	Creatine phosphate	Arg/Pro pathway	HILIC
+C00791	Creatinine	Arg/Pro pathway	HILIC
+C00134	1,4-Diaminobutane(Putrescine)	Arg/Pro pathway	GCQQQ
+NN	N-Acetylthreonine	N-acetyl-amino acid	GCQQQ
+C00183	Valine	BCAA pathway	GCQQQ
+C00123	Leucine	BCAA pathway	GCQQQ
+C00407	Isoleucine	BCAA pathway	GCQQQ
+C01933	Norleucine	BCAA pathway	GCQQQ
+HMDB00754	3-Hydroxyisovaleric acid	BCAA pathway	GCQQQ
+C00141	3-Methyl-2-oxobutyric acid	BCAA pathway	GCQQQ
+C03465	3-Methyl-2-oxovaleric acid	BCAA pathway	GCQQQ
+C00233	4-Methyl-2-oxovaleric acid	BCAA pathway	GCQQQ
+C02226	Citraconic acid	BCAA pathway	HILIC
+HMDB01844	Methylsuccinic acid	Dicarboxylic acid	GCQQQ
+HMDB00746	Leucic acid	BCAA pathway	HILIC
+C02504	2-Isopropylmalic acid	BCAA pathway	HILIC
+C00097	Cysteine	Cys/Met pathway	GCQQQ
+C00491	Cystine	Cys/Met pathway	GCQQQ
+C00073	Methionine	Cys/Met pathway	GCQQQ
+HMDB02005	Methionine sulfoxide	Cys/Met pathway	HILIC
+HMDB02108	Methylcysteine	Cys/Met pathway	GCQQQ
+C00021	S-adenosyl-homocysteine	Cys/Met pathway	HILIC
+C00135	Histidine	His pathway	HILIC
+C01152	1-Methylhistidine	His pathway	HILIC
+C00047	Lysine	Lys pathway	HILIC
+C00956	2-Aminoadipic acid	Lys pathway	GCQQQ
+C00408	Pipecolinic acid	Lys pathway	GCQQQ
+C00079	Phenylalanine	Phe pathway	HILIC
+C05852	2-Hydroxyphenylacetic acid	Phe pathway	HILIC
+C00180	Benzoic acid	Phe pathway	GCQQQ
+C05607	Phenyllactic acid	Phe pathway	HILIC
+C00082	Tyrosine	Tyr pathway	GCQQQ
+C01179	p-hydroxyphenylpyruvic acid	Tyr pathway	HILIC
+C00483	Tyramine	Tyr pathway	GCQQQ
+C01829	Thyroxine	Tyr pathway	HILIC
+C00078	Tryptophan	Trp pathway	GCQQQ
+C00328	Kynurenine	Trp pathway	GCQQQ
+C03722	Quinolinic acid	Trp pathway	GCQQQ
+HMDB03320	Indole-3-carboxlic acid	Trp pathway	HILIC
+C00954	3-Indoleacetic acid	Trp pathway	GCQQQ
+C00398	Tryptamine	Trp pathway	GCQQQ
+C10164	Picolinic acid	Trp pathway	GCQQQ
+C05658	Indoxyl	Trp pathway	GCQQQ
+C00099	beta-Alanine	Pyrimidine pathway	GCQQQ
+C01879	Pyroglutamic acid	Glutathione pathway	GCQQQ
+C00253	Nicotinic acid	Nicotinate and nicotinamide pathway	GCQQQ
+C00153	Nicotinamide	Nicotinate and nicotinamide pathway	HILIC
+C02918	Methylnicotinamide	Nicotinate and nicotinamide pathway	HILIC
+C01384	Maleic acid	Nicotinate and nicotinamide pathway	HILIC
+C00013	Pyrophosphoric acid	Purine pathway	HILIC
+C00009	Phosphoric acid	Purine pathway	GCQQQ
+C00002	ATP	Purine pathway	HILIC
+C00008	ADP	Purine pathway	HILIC
+C00212	Adenosine	Purine pathway	GCQQQ
+C00147	Adenine	Purine pathway	GCQQQ
+C00294	Inosine	Purine pathway	HILIC
+C00385	Xanthine	Purine pathway	HILIC
+C01762	Xanthosine	Purine pathway	HILIC
+C00262	Hypoxanthine	Purine pathway	HILIC
+C00366	Uric acid	Purine pathway	HILIC
+C00299	Uridine	Pyrimidine pathway	HILIC
+C00106	Uracil	Pyrimidine pathway	HILIC
+C00295	Orotic Acid	Pyrimidine pathway	HILIC
+C00847	4-Pyridoxic acid	Vitamine	HILIC
+C00864	Pantothenic acid	Vitamine	HILIC
+C08261	Azelaic acid	Dicarboxylic acid	GCQQQ
+C02656	Pimelic acid	Dicarboxylic acid	GCQQQ
+C02630	2-Hydroxyglutaric acid	Dicarboxylic acid	GCQQQ
+C02678	Dodecanedioic acid	Dicarboxylic acid	HILIC
+HMDB00622	Ethylmalonic acid	Dicarboxylic acid	GCQQQ
+C00489	Glutaric acid	Dicarboxylic acid	GCQQQ
+C08277	Sebacic acid	Dicarboxylic acid	HILIC
+C08278	Suberic acid	Dicarboxylic acid	GCQQQ
+HMDB00872	Tetradecanedioic acid	Dicarboxylic acid	HILIC
+C00258	Glyceric acid	Glyoxylate and dicarboxylate pathway	HILIC
+C00160	Glycolic acid	Glyoxylate and dicarboxylate pathway	GCQQQ
+C00216	Arabinose	Sugar related	GCQQQ
+C01835	Maltotriose	Sugar related	GCQQQ
+C05984	2-Hydroxybutyric acid	Propanate pathway	GCQQQ
+C00519	Hypotaurine	Taurine and hypotaurine pathway	GCQQQ
+C02477	alpha-tocopherol	Vitamin	GCQQQ
+HMDB00729	2-Hydroxyisobutyric acid	Others	GCQQQ
+C02287	Tartronic acid	Others	GCQQQ
+C00093	Glycerol-3-phosphate	Lipid pathway	HILIC
+C00588	Phosphorylcholine	Lipid pathway	HILIC
+C00670	Glycerophosphoryl choline	Lipid pathway	HILIC
+C01089	3-Hydroxybutyric acid	Lipid pathway	GCQQQ
+C00189	Ethanolamine	Lipid pathway	GCQQQ
+C00116	Glycerine	Lipid pathway	GCQQQ
+C00346	O-Phosphorylethanolamine	Lipid pathway	GCQQQ
+TKMD00046	Cholesterol	Cholesterol	Lipidomics
+TKMD00047	Cholesterol sulfate	Cholesterol	Lipidomics
+TKMD00048	Vitamin D3	Cholesterol	Lipidomics
+TKMD00010	Cholic acid	Bile acid pathway	Lipidomics
+C04483	Deoxycholic acid	Bile acid pathway	HILIC
+C01921	Glycocholic acid	Bile acid pathway	HILIC
+C05122	Taurocholic acid	Bile acid pathway	HILIC
+C05463	Taurodeoxycholic acid	Bile acid pathway	HILIC
+TKMD00062	Sphingosine-1-phosphate	Sphinganines 	Lipidomics
+TKMD00070	Coenzyme Q8	Ubiquinones 	Lipidomics
+TKMD00072	Coenzyme Q10 	Ubiquinones 	Lipidomics
+TKMD00075	Coenzyme Q8 (Reductive)	Ubiquinol	Lipidomics
+TKMD00135	FFA(C10:0)	Free fatty acid	Lipidomics
+TKMD00136	FFA(C10:1)	Free fatty acid	Lipidomics
+TKMD00139	FFA(C12:0)	Free fatty acid	Lipidomics
+TKMD00140	FFA(C12:1)	Free fatty acid	Lipidomics
+TKMD00142	FFA(C13:0)	Free fatty acid	Lipidomics
+TKMD00143	FFA(C13:1)	Free fatty acid	Lipidomics
+TKMD00145	FFA(C14:0)	Free fatty acid	Lipidomics
+TKMD00146	FFA(C14:1)	Free fatty acid	Lipidomics
+TKMD00147	FFA(C14:2)	Free fatty acid	Lipidomics
+TKMD00149	FFA(C15:0)	Free fatty acid	Lipidomics
+TKMD00150	FFA(C15:1)	Free fatty acid	Lipidomics
+TKMD00153	FFA(C16:0)	Free fatty acid	Lipidomics
+TKMD00154	FFA(C16:1)	Free fatty acid	Lipidomics
+TKMD00155	FFA(C16:2)	Free fatty acid	Lipidomics
+TKMD00156	FFA(C16:3)	Free fatty acid	Lipidomics
+TKMD00157	FFA(C17:0)	Free fatty acid	Lipidomics
+TKMD00158	FFA(C17:1)	Free fatty acid	Lipidomics
+TKMD00161	FFA(C18:0)	Free fatty acid	Lipidomics
+TKMD00162	FFA(C18:1)	Free fatty acid	Lipidomics
+TKMD00163	FFA(C18:2)	Free fatty acid	Lipidomics
+TKMD00164	FFA(C18:3)	Free fatty acid	Lipidomics
+TKMD00165	FFA(C20:0)	Free fatty acid	Lipidomics
+TKMD00166	FFA(C20:1)	Free fatty acid	Lipidomics
+TKMD00167	FFA(C20:2)	Free fatty acid	Lipidomics
+TKMD00168	FFA(C20:3)	Free fatty acid	Lipidomics
+TKMD00169	FFA(C20:4)	Free fatty acid	Lipidomics
+TKMD00170	FFA(C20:5)	Free fatty acid	Lipidomics
+TKMD00171	FFA(C20:6)	Free fatty acid	Lipidomics
+TKMD00172	FFA(C22:0)	Free fatty acid	Lipidomics
+TKMD00173	FFA(C22:1)	Free fatty acid	Lipidomics
+TKMD00174	FFA(C22:2)	Free fatty acid	Lipidomics
+TKMD00175	FFA(C22:3)	Free fatty acid	Lipidomics
+TKMD00176	FFA(C22:4)	Free fatty acid	Lipidomics
+TKMD00177	FFA(C22:5)	Free fatty acid	Lipidomics
+TKMD00178	FFA(C22:6)	Free fatty acid	Lipidomics
+TKMD00179	FFA(C24:0)	Free fatty acid	Lipidomics
+TKMD00180	FFA(C24:1)	Free fatty acid	Lipidomics
+TKMD00181	FFA(C24:2)	Free fatty acid	Lipidomics
+TKMD00184	FFA(C24:5)	Free fatty acid	Lipidomics
+TKMD00185	FFA(C24:6)	Free fatty acid	Lipidomics
+TKMD00186	FFA(C26:0)	Free fatty acid	Lipidomics
+TKMD00187	FFA(C26:1)	Free fatty acid	Lipidomics
+TKMD00188	FFA(C26:2)	Free fatty acid	Lipidomics
+TKMD00193	FFA(C28:0)	Free fatty acid	Lipidomics
+TKMD00208	FFA(C30:0)	Free fatty acid	Lipidomics
+C00318	Carnitine	Fatty acyl carnitines 	HILIC
+C02571	Acylcarnitine(C2:0)	Fatty acyl carnitines 	HILIC
+C03017	Acylcarnitine(C3:0)	Fatty acyl carnitines 	HILIC
+HMDB02013	Acylcarnitine(C4:0)	Fatty acyl carnitines 	HILIC
+HMDB13128	Acylcarnitine(C5:0)	Fatty acyl carnitines 	HILIC
+HMDB00705	Acylcarnitine(C6:0)	Fatty acyl carnitines 	HILIC
+HMDB00791	Acylcarnitine(C8:0)	Fatty acyl carnitines 	HILIC
+TKMD01026	Acylcarnitine(C8:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01029	Acylcarnitine(C10:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01030	Acylcarnitine(C10:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01033	Acylcarnitine(C12:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01034	Acylcarnitine(C12:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01035	Acylcarnitine(C13:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01036	Acylcarnitine(C13:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01037	Acylcarnitine(C14:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01038	Acylcarnitine(C14:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01039	Acylcarnitine(C14:2)	Fatty acyl carnitines 	Lipidomics
+TKMD01043	Acylcarnitine(C16:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01044	Acylcarnitine(C16:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01049	Acylcarnitine(C18:0)	Fatty acyl carnitines 	Lipidomics
+TKMD01050	Acylcarnitine(C18:1)	Fatty acyl carnitines 	Lipidomics
+TKMD01051	Acylcarnitine(C18:2)	Fatty acyl carnitines 	Lipidomics
+TKMD01524	LPC(a-14:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01525	LPC(a-15:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01529	LPC(a-16:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01530	LPC(a-16:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01531	LPC(a-17:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01532	LPC(a-17:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01533	LPC(a-18:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01534	LPC(a-18:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01535	LPC(a-18:2)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01536	LPC(a-18:3)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01537	LPC(a-19:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01538	LPC(a-19:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01541	LPC(a-20:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01542	LPC(a-20:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01543	LPC(a-20:2)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01544	LPC(a-20:3)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01545	LPC(a-20:4)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01546	LPC(a-20:5)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01554	LPC(a-22:1)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01557	LPC(a-22:4)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01558	LPC(a-22:5)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01559	LPC(a-22:6)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01567	LPC(a-24:0)	Lysophosphatidylcholine(acyl)	Lipidomics
+TKMD01608	LPC(e-16:0)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01609	LPC(e-16:1)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01612	LPC(e-18:0)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01613	LPC(e-18:1)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01614	LPC(e-18:2)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01620	LPC(e-20:0)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01632	LPC(e-22:0)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01633	LPC(e-22:1)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01646	LPC(e-24:0)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01647	LPC(e-24:1)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01648	LPC(e-24:2)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01661	LPC(e-26:1)	Lysophosphatidylcholine(alk)	Lipidomics
+TKMD01689	LPE(a-16:0)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01693	LPE(a-18:0)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01694	LPE(a-18:1)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01695	LPE(a-18:2)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01704	LPE(a-20:3)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01705	LPE(a-20:4)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01718	LPE(a-22:5)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01719	LPE(a-22:6)	Lysophosphatidylethanolamine(acyl)	Lipidomics
+TKMD01769	LPE(e-16:1)	Lysophosphatidylethanolamine(alk)	Lipidomics
+TKMD01773	LPE(e-18:1)	Lysophosphatidylethanolamine(alk)	Lipidomics
+TKMD01774	LPE(e-18:2)	Lysophosphatidylethanolamine(alk)	Lipidomics
+TKMD01781	LPE(e-20:1)	Lysophosphatidylethanolamine(alk)	Lipidomics
+TKMD01852	LPG(a-18:1)	Lysophosphatidylglycerol(acyl)	Lipidomics
+TKMD02005	LPI(a-16:0)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02006	LPI(a-16:1)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02009	LPI(a-18:0)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02010	LPI(a-18:1)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02011	LPI(a-18:2)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02020	LPI(a-20:3)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02021	LPI(a-20:4)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02035	LPI(a-22:6)	Lysophosphatidylinositol(acyl)	Lipidomics
+TKMD02330	PA(aa-32:1)	Phosphatidic acid(acyl)	Lipidomics
+TKMD02340	PA(aa-34:1)	Phosphatidic acid(acyl)	Lipidomics
+TKMD02341	PA(aa-34:2)	Phosphatidic acid(acyl)	Lipidomics
+TKMD02353	PA(aa-36:2)	Phosphatidic acid(acyl)	Lipidomics
+TKMD02354	PA(aa-36:3)	Phosphatidic acid(acyl)	Lipidomics
+TKMD02571	PC(aa-28:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02573	PC(aa-29:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02575	PC(aa-30:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02576	PC(aa-30:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02578	PC(aa-31:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02579	PC(aa-31:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02581	PC(aa-32:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02582	PC(aa-32:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02583	PC(aa-32:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02586	PC(aa-33:0)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02587	PC(aa-33:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02588	PC(aa-33:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02592	PC(aa-34:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02593	PC(aa-34:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02594	PC(aa-34:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02595	PC(aa-34:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02596	PC(aa-34:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02598	PC(aa-35:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02599	PC(aa-35:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02600	PC(aa-35:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02604	PC(aa-36:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02605	PC(aa-36:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02606	PC(aa-36:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02607	PC(aa-36:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02608	PC(aa-36:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02612	PC(aa-37:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02613	PC(aa-37:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02614	PC(aa-37:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02615	PC(aa-37:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02620	PC(aa-38:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02621	PC(aa-38:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02622	PC(aa-38:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02623	PC(aa-38:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02624	PC(aa-38:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02625	PC(aa-38:6)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02626	PC(aa-38:7)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02627	PC(aa-38:8)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02638	PC(aa-40:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02639	PC(aa-40:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02640	PC(aa-40:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02641	PC(aa-40:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02642	PC(aa-40:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02643	PC(aa-40:6)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02644	PC(aa-40:7)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02645	PC(aa-40:8)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02646	PC(aa-40:9)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02658	PC(aa-42:1)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02659	PC(aa-42:2)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02660	PC(aa-42:3)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02662	PC(aa-42:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02663	PC(aa-42:6)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02664	PC(aa-42:7)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02665	PC(aa-42:8)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02666	PC(aa-42:9)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02684	PC(aa-44:4)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02685	PC(aa-44:5)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02686	PC(aa-44:6)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02687	PC(aa-44:7)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02688	PC(aa-44:8)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02689	PC(aa-44:9)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02690	PC(aa-44:10)	Phosphatidylcholine(acyl)	Lipidomics
+TKMD02702	PC(ae-30:1)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02707	PC(ae-32:0)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02708	PC(ae-32:1)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02709	PC(ae-32:2)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02718	PC(ae-34:1)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02719	PC(ae-34:2)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02720	PC(ae-34:3)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02728	PC(ae-35:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02730	PC(ae-36:1)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02731	PC(ae-36:2)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02732	PC(ae-36:3)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02733	PC(ae-36:4)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02734	PC(ae-36:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02747	PC(ae-38:2)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02748	PC(ae-38:3)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02749	PC(ae-38:4)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02750	PC(ae-38:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02751	PC(ae-38:6)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02768	PC(ae-40:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02769	PC(ae-40:6)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02770	PC(ae-40:7)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02771	PC(ae-40:8)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02786	PC(ae-42:3)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02787	PC(ae-42:4)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02788	PC(ae-42:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02789	PC(ae-42:6)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02791	PC(ae-42:8)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02792	PC(ae-42:9)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02811	PC(ae-44:5)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02812	PC(ae-44:6)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02813	PC(ae-44:7)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02814	PC(ae-44:8)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02815	PC(ae-44:9)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02816	PC(ae-44:10)	Phosphatidylcholine(alk)	Lipidomics
+TKMD02834	PE(aa-32:1)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02844	PE(aa-34:1)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02845	PE(aa-34:2)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02846	PE(aa-34:3)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02856	PE(aa-36:1)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02857	PE(aa-36:2)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02858	PE(aa-36:3)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02859	PE(aa-36:4)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02860	PE(aa-36:5)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02872	PE(aa-38:1)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02873	PE(aa-38:2)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02874	PE(aa-38:3)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02875	PE(aa-38:4)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02876	PE(aa-38:5)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02877	PE(aa-38:6)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02878	PE(aa-38:7)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02892	PE(aa-40:3)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02893	PE(aa-40:4)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02894	PE(aa-40:5)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02895	PE(aa-40:6)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02896	PE(aa-40:7)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02912	PE(aa-42:3)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02913	PE(aa-42:4)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02914	PE(aa-42:5)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02915	PE(aa-42:6)	Phosphatidylethanolamine(acyl)	Lipidomics
+TKMD02970	PE(ae-34:1)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02971	PE(ae-34:2)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02972	PE(ae-34:3)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02983	PE(ae-36:2)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02984	PE(ae-36:3)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02985	PE(ae-36:4)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02986	PE(ae-36:5)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02987	PE(ae-36:6)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD02999	PE(ae-38:2)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03000	PE(ae-38:3)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03001	PE(ae-38:4)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03002	PE(ae-38:5)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03003	PE(ae-38:6)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03004	PE(ae-38:7)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03005	PE(ae-38:8)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03020	PE(ae-40:5)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03021	PE(ae-40:6)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03022	PE(ae-40:7)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03023	PE(ae-40:8)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03024	PE(ae-40:9)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03041	PE(ae-42:6)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03042	PE(ae-42:7)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03043	PE(ae-42:8)	Phosphatidylethanolamine(alk)	Lipidomics
+TKMD03337	PI(aa-32:0)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03338	PI(aa-32:1)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03347	PI(aa-34:0)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03348	PI(aa-34:1)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03349	PI(aa-34:2)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03350	PI(aa-34:3)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03354	PI(aa-35:1)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03355	PI(aa-35:2)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03360	PI(aa-36:1)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03361	PI(aa-36:2)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03362	PI(aa-36:3)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03363	PI(aa-36:4)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03364	PI(aa-36:5)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03369	PI(aa-37:2)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03370	PI(aa-37:3)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03371	PI(aa-37:4)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03375	PI(aa-38:0)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03376	PI(aa-38:1)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03377	PI(aa-38:2)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03378	PI(aa-38:3)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03379	PI(aa-38:4)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03380	PI(aa-38:5)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03381	PI(aa-38:6)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03398	PI(aa-40:5)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03399	PI(aa-40:6)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03400	PI(aa-40:7)	Phosphatidylinositol(acyl)	Lipidomics
+TKMD03612	PS(aa-36:1)	Phosphatidylserine(acyl)	Lipidomics
+TKMD03613	PS(aa-36:2)	Phosphatidylserine(acyl)	Lipidomics
+TKMD03628	PS(aa-38:1)	Phosphatidylserine(acyl)	Lipidomics
+TKMD03629	PS(aa-38:2)	Phosphatidylserine(acyl)	Lipidomics
+TKMD03630	PS(aa-38:3)	Phosphatidylserine(acyl)	Lipidomics
+TKMD03631	PS(aa-38:4)	Phosphatidylserine(acyl)	Lipidomics
+TKMD04430	CE(a-18:1)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04431	CE(a-18:2)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04439	CE(a-20:2)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04440	CE(a-20:3)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04441	CE(a-20:4)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04442	CE(a-20:5)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04454	CE(a-22:5)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04455	CE(a-22:6)	Cholesteryl esters(acyl) 	Lipidomics
+TKMD04805	MG(a-16:0)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04806	MG(a-16:1)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04809	MG(a-18:0)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04810	MG(a-18:1)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04811	MG(a-18:2)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04812	MG(a-18:3)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04821	MG(a-20:4)	Monoacylglycerol(acyl)	Lipidomics
+TKMD04835	MG(a-22:6)	Monoacylglycerol(acyl)	Lipidomics
+TKMD05036	DG(aa-32:0)	Diacylglycerol(acyl)	Lipidomics
+TKMD05037	DG(aa-32:1)	Diacylglycerol(acyl)	Lipidomics
+TKMD05046	DG(aa-34:0)	Diacylglycerol(acyl)	Lipidomics
+TKMD05047	DG(aa-34:1)	Diacylglycerol(acyl)	Lipidomics
+TKMD05048	DG(aa-34:2)	Diacylglycerol(acyl)	Lipidomics
+TKMD05049	DG(aa-34:3)	Diacylglycerol(acyl)	Lipidomics
+TKMD05058	DG(aa-36:0)	Diacylglycerol(acyl)	Lipidomics
+TKMD05059	DG(aa-36:1)	Diacylglycerol(acyl)	Lipidomics
+TKMD05060	DG(aa-36:2)	Diacylglycerol(acyl)	Lipidomics
+TKMD05061	DG(aa-36:3)	Diacylglycerol(acyl)	Lipidomics
+TKMD05062	DG(aa-36:4)	Diacylglycerol(acyl)	Lipidomics
+TKMD05076	DG(aa-38:2)	Diacylglycerol(acyl)	Lipidomics
+TKMD05077	DG(aa-38:3)	Diacylglycerol(acyl)	Lipidomics
+TKMD05078	DG(aa-38:4)	Diacylglycerol(acyl)	Lipidomics
+TKMD05079	DG(aa-38:5)	Diacylglycerol(acyl)	Lipidomics
+TKMD05080	DG(aa-38:6)	Diacylglycerol(acyl)	Lipidomics
+TKMD05098	DG(aa-40:6)	Diacylglycerol(acyl)	Lipidomics
+TKMD05099	DG(aa-40:7)	Diacylglycerol(acyl)	Lipidomics
+TKMD05100	DG(aa-40:8)	Diacylglycerol(acyl)	Lipidomics
+TKMD05452	TG(aaa-40:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05453	TG(aaa-40:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05454	TG(aaa-40:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05461	TG(aaa-41:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05470	TG(aaa-42:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05471	TG(aaa-42:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05472	TG(aaa-42:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05473	TG(aaa-42:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05481	TG(aaa-43:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05482	TG(aaa-43:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05483	TG(aaa-43:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05492	TG(aaa-44:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05493	TG(aaa-44:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05494	TG(aaa-44:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05495	TG(aaa-44:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05496	TG(aaa-44:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05497	TG(aaa-44:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05504	TG(aaa-45:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05505	TG(aaa-45:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05506	TG(aaa-45:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05507	TG(aaa-45:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05516	TG(aaa-46:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05517	TG(aaa-46:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05518	TG(aaa-46:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05519	TG(aaa-46:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05520	TG(aaa-46:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05521	TG(aaa-46:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05530	TG(aaa-47:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05531	TG(aaa-47:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05532	TG(aaa-47:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05533	TG(aaa-47:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05542	TG(aaa-48:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05543	TG(aaa-48:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05544	TG(aaa-48:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05545	TG(aaa-48:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05546	TG(aaa-48:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05547	TG(aaa-48:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05548	TG(aaa-48:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05555	TG(aaa-49:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05556	TG(aaa-49:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05557	TG(aaa-49:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05558	TG(aaa-49:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05559	TG(aaa-49:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05560	TG(aaa-49:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05568	TG(aaa-50:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05569	TG(aaa-50:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05570	TG(aaa-50:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05571	TG(aaa-50:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05572	TG(aaa-50:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05573	TG(aaa-50:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05574	TG(aaa-50:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05575	TG(aaa-50:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05581	TG(aaa-51:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05582	TG(aaa-51:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05583	TG(aaa-51:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05584	TG(aaa-51:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05585	TG(aaa-51:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05586	TG(aaa-51:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05587	TG(aaa-51:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05588	TG(aaa-51:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05594	TG(aaa-52:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05595	TG(aaa-52:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05596	TG(aaa-52:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05597	TG(aaa-52:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05598	TG(aaa-52:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05599	TG(aaa-52:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05600	TG(aaa-52:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05601	TG(aaa-52:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05602	TG(aaa-52:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05603	TG(aaa-52:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05607	TG(aaa-53:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05608	TG(aaa-53:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05609	TG(aaa-53:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05610	TG(aaa-53:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05611	TG(aaa-53:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05612	TG(aaa-53:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05613	TG(aaa-53:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05621	TG(aaa-54:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05622	TG(aaa-54:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05623	TG(aaa-54:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05624	TG(aaa-54:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05625	TG(aaa-54:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05626	TG(aaa-54:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05627	TG(aaa-54:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05628	TG(aaa-54:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05629	TG(aaa-54:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05630	TG(aaa-54:10)	Triacylglycerol(acyl)	Lipidomics
+TKMD05634	TG(aaa-55:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05635	TG(aaa-55:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05636	TG(aaa-55:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05637	TG(aaa-55:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05638	TG(aaa-55:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05639	TG(aaa-55:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05640	TG(aaa-55:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05641	TG(aaa-55:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05642	TG(aaa-55:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05643	TG(aaa-55:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05647	TG(aaa-56:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05648	TG(aaa-56:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05649	TG(aaa-56:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05650	TG(aaa-56:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05651	TG(aaa-56:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05652	TG(aaa-56:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05653	TG(aaa-56:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05654	TG(aaa-56:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05655	TG(aaa-56:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05656	TG(aaa-56:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05657	TG(aaa-56:10)	Triacylglycerol(acyl)	Lipidomics
+TKMD05658	TG(aaa-56:11)	Triacylglycerol(acyl)	Lipidomics
+TKMD05661	TG(aaa-57:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05662	TG(aaa-57:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05663	TG(aaa-57:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05664	TG(aaa-57:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05665	TG(aaa-57:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05666	TG(aaa-57:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05667	TG(aaa-57:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05668	TG(aaa-57:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05669	TG(aaa-57:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05670	TG(aaa-57:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05671	TG(aaa-57:10)	Triacylglycerol(acyl)	Lipidomics
+TKMD05674	TG(aaa-58:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05675	TG(aaa-58:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05676	TG(aaa-58:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05677	TG(aaa-58:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05678	TG(aaa-58:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05679	TG(aaa-58:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05680	TG(aaa-58:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05681	TG(aaa-58:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05682	TG(aaa-58:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05683	TG(aaa-58:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05684	TG(aaa-58:10)	Triacylglycerol(acyl)	Lipidomics
+TKMD05685	TG(aaa-58:11)	Triacylglycerol(acyl)	Lipidomics
+TKMD05686	TG(aaa-58:12)	Triacylglycerol(acyl)	Lipidomics
+TKMD05687	TG(aaa-58:13)	Triacylglycerol(acyl)	Lipidomics
+TKMD05689	TG(aaa-59:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05690	TG(aaa-59:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05691	TG(aaa-59:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05692	TG(aaa-59:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05693	TG(aaa-59:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05702	TG(aaa-60:0)	Triacylglycerol(acyl)	Lipidomics
+TKMD05703	TG(aaa-60:1)	Triacylglycerol(acyl)	Lipidomics
+TKMD05704	TG(aaa-60:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05705	TG(aaa-60:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05706	TG(aaa-60:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05707	TG(aaa-60:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05708	TG(aaa-60:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05709	TG(aaa-60:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05710	TG(aaa-60:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05711	TG(aaa-60:9)	Triacylglycerol(acyl)	Lipidomics
+TKMD05712	TG(aaa-60:10)	Triacylglycerol(acyl)	Lipidomics
+TKMD05713	TG(aaa-60:11)	Triacylglycerol(acyl)	Lipidomics
+TKMD05714	TG(aaa-60:12)	Triacylglycerol(acyl)	Lipidomics
+TKMD05715	TG(aaa-60:13)	Triacylglycerol(acyl)	Lipidomics
+TKMD05716	TG(aaa-60:14)	Triacylglycerol(acyl)	Lipidomics
+TKMD05734	TG(aaa-62:2)	Triacylglycerol(acyl)	Lipidomics
+TKMD05735	TG(aaa-62:3)	Triacylglycerol(acyl)	Lipidomics
+TKMD05736	TG(aaa-62:4)	Triacylglycerol(acyl)	Lipidomics
+TKMD05737	TG(aaa-62:5)	Triacylglycerol(acyl)	Lipidomics
+TKMD05738	TG(aaa-62:6)	Triacylglycerol(acyl)	Lipidomics
+TKMD05739	TG(aaa-62:7)	Triacylglycerol(acyl)	Lipidomics
+TKMD05740	TG(aaa-62:8)	Triacylglycerol(acyl)	Lipidomics
+TKMD05743	TG(aaa-62:11)	Triacylglycerol(acyl)	Lipidomics
+TKMD05744	TG(aaa-62:12)	Triacylglycerol(acyl)	Lipidomics
+TKMD05745	TG(aaa-62:13)	Triacylglycerol(acyl)	Lipidomics
+TKMD05746	TG(aaa-62:14)	Triacylglycerol(acyl)	Lipidomics
+TKMD05747	TG(aaa-62:15)	Triacylglycerol(acyl)	Lipidomics
+TKMD05748	TG(aaa-62:16)	Triacylglycerol(acyl)	Lipidomics
+TKMD05780	TG(aaa-64:17)	Triacylglycerol(acyl)	Lipidomics
+TKMD07278	Cer(14:0)	Ceramide	Lipidomics
+TKMD07282	Cer(16:0)	Ceramide	Lipidomics
+TKMD07283	Cer(16:1)	Ceramide	Lipidomics
+TKMD07284	Cer(17:0)	Ceramide	Lipidomics
+TKMD07286	Cer(18:0)	Ceramide	Lipidomics
+TKMD07287	Cer(18:1)	Ceramide	Lipidomics
+TKMD07294	Cer(20:0)	Ceramide	Lipidomics
+TKMD07295	Cer(20:1)	Ceramide	Lipidomics
+TKMD07298	Cer(21:0)	Ceramide	Lipidomics
+TKMD07302	Cer(22:0)	Ceramide	Lipidomics
+TKMD07303	Cer(22:1)	Ceramide	Lipidomics
+TKMD07307	Cer(23:0)	Ceramide	Lipidomics
+TKMD07308	Cer(23:1)	Ceramide	Lipidomics
+TKMD07312	Cer(24:0)	Ceramide	Lipidomics
+TKMD07313	Cer(24:1)	Ceramide	Lipidomics
+TKMD07314	Cer(24:2)	Ceramide	Lipidomics
+TKMD07320	Cer(25:0)	Ceramide	Lipidomics
+TKMD07321	Cer(25:1)	Ceramide	Lipidomics
+TKMD07328	Cer(26:0)	Ceramide	Lipidomics
+TKMD07329	Cer(26:1)	Ceramide	Lipidomics
+TKMD07562	DHC(16:0)	Dihydroceramide	Lipidomics
+TKMD07564	DHC(18:0)	Dihydroceramide	Lipidomics
+TKMD07566	DHC(20:0)	Dihydroceramide	Lipidomics
+TKMD07568	DHC(22:0)	Dihydroceramide	Lipidomics
+TKMD07569	DHC(23:0)	Dihydroceramide	Lipidomics
+TKMD07570	DHC(24:0)	Dihydroceramide	Lipidomics
+TKMD07571	DHC(25:0)	Dihydroceramide	Lipidomics
+TKMD07572	DHC(26:0)	Dihydroceramide	Lipidomics
+TKMD07621	SM(12:0)	Sphingomyelin	Lipidomics
+TKMD07622	SM(13:0)	Sphingomyelin	Lipidomics
+TKMD07623	SM(14:0)	Sphingomyelin	Lipidomics
+TKMD07624	SM(14:1)	Sphingomyelin	Lipidomics
+TKMD07625	SM(15:0)	Sphingomyelin	Lipidomics
+TKMD07626	SM(15:1)	Sphingomyelin	Lipidomics
+TKMD07627	SM(16:0)	Sphingomyelin	Lipidomics
+TKMD07628	SM(16:1)	Sphingomyelin	Lipidomics
+TKMD07629	SM(17:0)	Sphingomyelin	Lipidomics
+TKMD07630	SM(17:1)	Sphingomyelin	Lipidomics
+TKMD07631	SM(18:0)	Sphingomyelin	Lipidomics
+TKMD07632	SM(18:1)	Sphingomyelin	Lipidomics
+TKMD07635	SM(19:0)	Sphingomyelin	Lipidomics
+TKMD07639	SM(20:0)	Sphingomyelin	Lipidomics
+TKMD07640	SM(20:1)	Sphingomyelin	Lipidomics
+TKMD07643	SM(21:0)	Sphingomyelin	Lipidomics
+TKMD07644	SM(21:1)	Sphingomyelin	Lipidomics
+TKMD07647	SM(22:0)	Sphingomyelin	Lipidomics
+TKMD07648	SM(22:1)	Sphingomyelin	Lipidomics
+TKMD07649	SM(22:2)	Sphingomyelin	Lipidomics
+TKMD07652	SM(23:0)	Sphingomyelin	Lipidomics
+TKMD07653	SM(23:1)	Sphingomyelin	Lipidomics
+TKMD07654	SM(23:2)	Sphingomyelin	Lipidomics
+TKMD07657	SM(24:0)	Sphingomyelin	Lipidomics
+TKMD07658	SM(24:1)	Sphingomyelin	Lipidomics
+TKMD07659	SM(24:2)	Sphingomyelin	Lipidomics
+TKMD07665	SM(25:0)	Sphingomyelin	Lipidomics
+TKMD07666	SM(25:1)	Sphingomyelin	Lipidomics
+TKMD07667	SM(25:2)	Sphingomyelin	Lipidomics
+TKMD07673	SM(26:0)	Sphingomyelin	Lipidomics
+TKMD07674	SM(26:1)	Sphingomyelin	Lipidomics
+TKMD07717	DHSM(14:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07718	DHSM(15:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07719	DHSM(16:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07721	DHSM(18:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07723	DHSM(20:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07726	DHSM(23:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07727	DHSM(24:0)	Dihydrosphingomyelin	Lipidomics
+TKMD07856	Phytocer(22:0)	Phytoceramide	Lipidomics
+TKMD07857	Phytocer(22:1)	Phytoceramide	Lipidomics
+TKMD07861	Phytocer(23:0)	Phytoceramide	Lipidomics
+TKMD07866	Phytocer(24:0)	Phytoceramide	Lipidomics
+TKMD07867	Phytocer(24:1)	Phytoceramide	Lipidomics
+TKMD07875	Phytocer(25:1)	Phytoceramide	Lipidomics
+TKMD07876	Phytocer(25:2)	Phytoceramide	Lipidomics
+TKMD07882	Phytocer(26:0)	Phytoceramide	Lipidomics
+TKMD07883	Phytocer(26:1)	Phytoceramide	Lipidomics
+TKMD07923	Cer-1P(16:0)	Ceramide-1P	Lipidomics
+TKMD07924	Cer-1P(16:1)	Ceramide-1P	Lipidomics
+TKMD07925	Cer-1P(18:0)	Ceramide-1P	Lipidomics
+TKMD07926	Cer-1P(18:1)	Ceramide-1P	Lipidomics
+TKMD07927	Cer-1P(20:0)	Ceramide-1P	Lipidomics
+TKMD07931	Cer-1P(22:0)	Ceramide-1P	Lipidomics
+TKMD07932	Cer-1P(22:1)	Ceramide-1P	Lipidomics
+TKMD07935	Cer-1P(24:0)	Ceramide-1P	Lipidomics
+TKMD07936	Cer-1P(24:1)	Ceramide-1P	Lipidomics
+TKMD07937	Cer-1P(24:2)	Ceramide-1P	Lipidomics
+TKMD08005	Hex-Cer(16:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08009	Hex-Cer(18:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08017	Hex-Cer(20:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08021	Hex-Cer(21:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08025	Hex-Cer(22:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08026	Hex-Cer(22:1)	Glc/Gal-ceramide	Lipidomics
+TKMD08030	Hex-Cer(23:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08035	Hex-Cer(24:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08036	Hex-Cer(24:1)	Glc/Gal-ceramide	Lipidomics
+TKMD08037	Hex-Cer(24:2)	Glc/Gal-ceramide	Lipidomics
+TKMD08043	Hex-Cer(25:0)	Glc/Gal-ceramide	Lipidomics
+TKMD08346	Hex2-Cer(14:0)	Lactosylceramide	Lipidomics
+TKMD08350	Hex2-Cer(16:0)	Lactosylceramide	Lipidomics
+TKMD08351	Hex2-Cer(16:1)	Lactosylceramide	Lipidomics
+TKMD08370	Hex2-Cer(22:0)	Lactosylceramide	Lipidomics
+TKMD08380	Hex2-Cer(24:0)	Lactosylceramide	Lipidomics
+TKMD08381	Hex2-Cer(24:1)	Lactosylceramide	Lipidomics
+TKMD08693	Hex3-Cer(16:0)	Globotriaosylceramide (G00093)	Lipidomics
+TKMD08694	Hex3-Cer(16:1)	Globotriaosylceramide (G00093)	Lipidomics
+TKMD08713	Hex3-Cer(22:0)	Globotriaosylceramide (G00093)	Lipidomics
+TKMD08723	Hex3-Cer(24:0)	Globotriaosylceramide (G00093)	Lipidomics
+TKMD08724	Hex3-Cer(24:1)	Globotriaosylceramide (G00093)	Lipidomics
+TKMD09669	GA1(14:0)	GA1 Ganglioside	Lipidomics
+TKMD09673	GA1(16:0)	GA1 Ganglioside	Lipidomics
+TKMD09674	GA1(16:1)	GA1 Ganglioside	Lipidomics
+TKMD09678	GA1(18:1)	GA1 Ganglioside	Lipidomics
+TKMD09704	GA1(24:1)	GA1 Ganglioside	Lipidomics
+TKMD09903	GM1(16:0)	GM1 Ganglioside	Lipidomics
+TKMD10359	GM3(14:0)	GM3 Ganglioside	Lipidomics
+TKMD10363	GM3(16:0)	GM3 Ganglioside	Lipidomics
+TKMD10364	GM3(16:1)	GM3 Ganglioside	Lipidomics
+TKMD10365	GM3(17:0)	GM3 Ganglioside	Lipidomics
+TKMD10367	GM3(18:0)	GM3 Ganglioside	Lipidomics
+TKMD10368	GM3(18:1)	GM3 Ganglioside	Lipidomics
+TKMD10375	GM3(20:0)	GM3 Ganglioside	Lipidomics
+TKMD10376	GM3(20:1)	GM3 Ganglioside	Lipidomics
+TKMD10383	GM3(22:0)	GM3 Ganglioside	Lipidomics
+TKMD10384	GM3(22:1)	GM3 Ganglioside	Lipidomics
+TKMD10388	GM3(23:0)	GM3 Ganglioside	Lipidomics
+TKMD10393	GM3(24:0)	GM3 Ganglioside	Lipidomics
+TKMD10394	GM3(24:1)	GM3 Ganglioside	Lipidomics
+TKMD10395	GM3(24:2)	GM3 Ganglioside	Lipidomics
+TKMD10823	GD1(16:0)	GD1 Ganglioside	Lipidomics
+TKMD10827	GD1(18:0)	GD1 Ganglioside	Lipidomics
+TKMD11283	GD3(16:0)	GD3 Ganglioside	Lipidomics
+TKMD11303	GD3(22:0)	GD3 Ganglioside	Lipidomics
+TKMD11313	GD3(24:0)	GD3 Ganglioside	Lipidomics
+TKMD11314	GD3(24:1)	GD3 Ganglioside	Lipidomics
+TKMD11315	GD3(24:2)	GD3 Ganglioside	Lipidomics
+TKMD19131	Sulfatide(Hex/16:0)	Sulfatide-Hex Ganglioside	Lipidomics
+TKMD19132	Sulfatide(Hex/16:1)	Sulfatide-Hex Ganglioside	Lipidomics
+TKMD19152	Sulfatide(Hex/22:1)	Sulfatide-Hex Ganglioside	Lipidomics
+TKMD19162	Sulfatide(Hex/24:1)	Sulfatide-Hex Ganglioside	Lipidomics
+TKMD19163	Sulfatide(Hex/24:2)	Sulfatide-Hex Ganglioside	Lipidomics

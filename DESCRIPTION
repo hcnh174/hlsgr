@@ -14,13 +14,20 @@ Depends:
     R (>= 3.6.0)
 biocViews:
 Imports:
+    biovizBase,
+    DESeq2,
+    dplyr,
+    edgeR,
+    ggbio,
+    ggplot2,
+    magrittr,
+    openxlsx,
+    pheatmap,
     plyr,
     R.oo,
-    ggplot2,
-    dplyr,
     rlang,
-    ggbio,
-    biovizBase
+    tidyverse,
+    tximport
 Suggests: 
     knitr,
     rmarkdown
