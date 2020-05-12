@@ -31,6 +31,7 @@ BiocManager::install("edgeR", update=FALSE)
 BiocManager::install("DESeq2", update=FALSE)
 
 # links and tutorials
+https://r4ds.had.co.nz/tibbles.html
 http://r-pkgs.had.co.nz/tests.html
 http://r-pkgs.had.co.nz/git.html
 https://rawgit.com/rstudio/cheatsheets/master/package-development.pdf
