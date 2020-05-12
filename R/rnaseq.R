@@ -133,7 +133,7 @@ analyzeSalmonDataDeSeq2 <- function(salmon, outdir, exclude_samples=c(), include
 	mds <- cbind(mdsData, as.data.frame(SummarizedExperiment::colData(vsd))) # combine with sample data
 
 	annot_col <- samples[,c('sample', 'group')] %>%
-	  select(group) %>%
+	  dplyr::select(group) %>%
 	  as.data.frame()
 
 	return(list(salmon=salmon, dds=dds, res=res, res_lfc=res_lfc, mds=mds, vsd=vsd, annot_col=annot_col))
