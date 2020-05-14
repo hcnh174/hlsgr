@@ -2,13 +2,13 @@
 % Please edit documentation in R/rnaseq.R
 \name{analyzeSalmonDataDeSeq2}
 \alias{analyzeSalmonDataDeSeq2}
-\title{Analyze Salmon quant data using DeSeq1}
+\title{Analyze Salmon quant data using DeSeq2}
 \usage{
 analyzeSalmonDataDeSeq2(
   salmon,
   outdir,
   exclude_samples = c(),
-  include_genes = c(),
+  protein_only = FALSE,
   groupcol = "group",
   levels = c("Control", "Case")
 )
@@ -20,5 +20,5 @@ analyzeSalmonDataDeSeq2(
 
 }
 \description{
-Analyze Salmon quant data using DeSeq1
+Analyze Salmon quant data using DeSeq2
 }

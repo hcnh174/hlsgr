@@ -203,7 +203,7 @@ colExists <- function(data, colname)
 checkColExists <- function(data, colname)
 {
   if (!colExists(data,colname))
-    throw('cannot find col with colname: ',colname)
+    R.oo::throw('cannot find col with colname: ',colname)
 }
 #checkColExists(subjects,'hbv_vs_healthy')
 

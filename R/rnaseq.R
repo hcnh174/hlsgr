@@ -58,6 +58,39 @@ loadSalmonData <- function(samples, quantdir)
 	return(list(txi=gene.exp, samples=samples, txdb=txdb))
 }
 
+##############################################################################
+
+#' Write Salmon quant data to to rds file for faster loading across sessions
+#'
+#' @param salmon salmon quant data
+#' @param filename .rds file to store quant data in
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' saveSalmonData(salmon, 'salmon.rds')
+saveSalmonData <- function(salmon, filename)
+{
+  saveRDS(salmon, file = filename)
+}
+
+############################################################
+
+#' Read Salmon data from RDS file
+#'
+#' @param filename .rds file holding salmon quant data
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' salmon = readSalmonData('salmon.rds')
+readSalmonData <- function(filename)
+{
+  return(readRDS(file = filename))
+}
+
 ####################################################################################
 
 #' Subset txi data by sample or gene
@@ -81,7 +114,7 @@ subsetTxi <- function(txi, samples, include_genes=rownames(txi$counts))
 
 ####################################################################################
 
-#' Analyze Salmon quant data using DeSeq1
+#' Analyze Salmon quant data using DeSeq2
 #'
 #' @param salmon
 #' @param exclude_samples
@@ -93,17 +126,26 @@ subsetTxi <- function(txi, samples, include_genes=rownames(txi$counts))
 #' @export
 #'
 #' @examples
-analyzeSalmonDataDeSeq2 <- function(salmon, outdir, exclude_samples=c(), include_genes=c(), groupcol='group', levels=c('Control', 'Case'))
+analyzeSalmonDataDeSeq2 <- function(salmon, outdir, exclude_samples=c(), protein_only = FALSE,
+                                    groupcol='group', levels=c('Control', 'Case'))
 {
+  print(paste0('outdir=', outdir))
+  print(paste0('exclude_samples=', exclude_samples))
+  print(paste0('protein_only=', protein_only))
+  print(paste0('groupcol=', groupcol))
+  print(paste0('levels=', levels))
+
 	samples <- salmon$samples
 	samples <- samples[!(samples$sample %in% exclude_samples),]
 	samples <- samples[!is.na(samples[[groupcol]]),]
 	samples[[groupcol]] <- factor(samples[[groupcol]], levels=levels)
 
+	include_genes <- if(protein_only) protein_coding_genes$gene_id else rownames(salmon$txi$counts)
+
 	txi <- subsetTxi(salmon$txi, samples, include_genes=include_genes)
 
 	# create the design matrix
-	group <- factor(samples[colnames(txi$counts), 'group'], levels=levels)
+	group <- factor(samples[colnames(txi$counts), groupcol], levels=levels)
 	design <- model.matrix(~group)
 	print(design)
 
