@@ -230,6 +230,23 @@ loadSamples <- function(filename)
 
 ###################################################
 
+#' loadSubjects
+#'
+#' @param filename
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' groups <- loadSubjects('subjects.txt')
+loadSubjects <- function(filename)
+{
+  subjects <- loadDataFrame(filename)
+  return(subjects)
+}
+
+#########################################################
+
 #' loadGroups
 #'
 #' @param filename
@@ -245,9 +262,28 @@ loadGroups <- function(filename)
   return(groups)
 }
 
+#####################################################
+
+#' Load NGS project metadata from dir
+#'
+#' @param dir
+#'
+#' @return
+#' @export
+#'
+#' @examples
+loadNgsProject <- function(dir)
+{
+  subjects <- loadSubjects(paste0(dir, '/subjects.txt'))
+  samples <- loadSamples(paste0(dir, '/samples.txt'))
+  groups <- loadGroups(paste0(dir, '/treatments.txt'))
+  project <- list(samples = samples, groups=groups)
+  return(project)
+}
+
 ##############################################
 
-#' Load Salmon quant files
+#' Load Subread count files
 #'
 #' @param samples
 #' @param countdir
@@ -258,9 +294,10 @@ loadGroups <- function(filename)
 #' @examples
 #' countdir <-
 #' subread <- loadSubreadData(samples, countdir)
-loadSubreadData <- function(samples, countdir)
+loadSubreadData <- function(project, countdir)
 {
   # make a list of the count files under the specified directory
+  samples <- project$samples
   counts <- NA
   for (sample in samples$sample)
   {
@@ -290,8 +327,10 @@ loadSubreadData <- function(samples, countdir)
 #' @export
 #'
 #' @examples
-getSamplesByGroup <- function(samples, groups, groupcol, excluded=c())
+getSamplesByGroup <- function(project, groupcol, excluded=c())
 {
+  samples <- project$samples
+  groups <- project$groups
   samples <- samples[!(samples$sample %in% exclude_samples),]
   samples$group <- samples[[paste0('group.', groupcol)]]
   samples <- samples[!is.na(samples$group),]

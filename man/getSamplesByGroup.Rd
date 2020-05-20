@@ -4,16 +4,16 @@
 \alias{getSamplesByGroup}
 \title{getSamplesByGroup}
 \usage{
-getSamplesByGroup(samples, groups, groupcol, excluded = c())
+getSamplesByGroup(project, groupcol, excluded = c())
 }
 \arguments{
-\item{samples}{loaded from samples.txt}
-
-\item{groups}{loaded from groups.txt}
-
 \item{groupcol}{group column}
 
 \item{excluded}{vector of samples to exclude}
+
+\item{samples}{loaded from samples.txt}
+
+\item{groups}{loaded from groups.txt}
 }
 \value{
 

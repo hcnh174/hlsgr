@@ -2,9 +2,9 @@
 % Please edit documentation in R/rnaseq.R
 \name{loadSubreadData}
 \alias{loadSubreadData}
-\title{Load Salmon quant files}
+\title{Load Subread count files}
 \usage{
-loadSubreadData(samples, countdir)
+loadSubreadData(project, countdir)
 }
 \arguments{
 \item{countdir}{}
@@ -13,7 +13,7 @@ loadSubreadData(samples, countdir)
 
 }
 \description{
-Load Salmon quant files
+Load Subread count files
 }
 \examples{
 countdir <-
