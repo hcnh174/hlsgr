@@ -206,4 +206,95 @@ plotDeSeq2Heatmap <- function(result, num=50, fontsize=6, color=colorRampPalette
 
 ####################################################################################
 
+#' Load sample information
+#'
+#' @param samples
+#' @param countdir
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' filename <- 'samples.txt'
+#' samples <- loadSamples(filename)
+loadSamples <- function(filename)
+{
+  samples <- loadDataFrame(filename)
+  samples$name <- as.character(samples$name)
+  samples$subject <- as.character(samples$subject)
+  samples$sample <- samples$name
+  samples[samples==''] <- NA
+  rownames(samples) <- samples$sample
+  return(samples)
+}
 
+###################################################
+
+#' loadGroups
+#'
+#' @param filename
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' groups <- loadGroups('treatments.txt')
+loadGroups <- function(filename)
+{
+  groups <- loadDataFrame(filename)
+  return(groups)
+}
+
+##############################################
+
+#' Load Salmon quant files
+#'
+#' @param samples
+#' @param countdir
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' countdir <-
+#' subread <- loadSubreadData(samples, countdir)
+loadSubreadData <- function(samples, countdir)
+{
+  # make a list of the count files under the specified directory
+  counts <- NA
+  for (sample in samples$sample)
+  {
+    filename <- file.path(countdir, sample, paste0(sample, '.txt'))
+    df <- as.data.frame(readr::read_tsv(filename, skip = 1)[, c(1,7)])
+    colnames(df) <- c('geneid', as.character(sample))
+    if (is.na(counts))
+      counts <- df
+    else counts <- cbind(counts, df[[sample]])
+  }
+  colnames(counts) <- c('geneid', samples$sample)
+  rownames(counts) <- as.character(counts$geneid)
+  counts <- counts[,-1]
+  return(counts)
+}
+
+##################################################
+
+#' getSamplesByGroup
+#'
+#' @param samples loaded from samples.txt
+#' @param groups loaded from groups.txt
+#' @param groupcol group column
+#' @param excluded vector of samples to exclude
+#'
+#' @return
+#' @export
+#'
+#' @examples
+getSamplesByGroup <- function(samples, groups, groupcol, excluded=c())
+{
+  samples <- samples[!(samples$sample %in% exclude_samples),]
+  samples$group <- samples[[paste0('group.', groupcol)]]
+  samples <- samples[!is.na(samples$group),]
+  samples$group <- factor(samples$group, levels=groups[groups$group==groupcol, 'level'])
+  return(samples)
+}
