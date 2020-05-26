@@ -276,7 +276,7 @@ loadNgsProject <- function(dir)
 {
   subjects <- loadSubjects(paste0(dir, '/subjects.txt'))
   samples <- loadSamples(paste0(dir, '/samples.txt'))
-  groups <- loadGroups(paste0(dir, '/treatments.txt'))
+  groups <- loadGroups(paste0(dir, '/groups.txt'))
   project <- list(samples = samples, groups=groups)
   return(project)
 }
