@@ -262,6 +262,23 @@ loadGroups <- function(filename)
   return(groups)
 }
 
+#########################################################
+
+#' loadRuns
+#'
+#' @param filename
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' groups <- loadRuns('runs.txt')
+loadRuns <- function(filename)
+{
+  runs <- loadDataFrame(filename)
+  return(runs)
+}
+
 #####################################################
 
 #' Load NGS project metadata from dir
@@ -276,8 +293,9 @@ loadNgsProject <- function(dir)
 {
   subjects <- loadSubjects(paste0(dir, '/subjects.txt'))
   samples <- loadSamples(paste0(dir, '/samples.txt'))
+  runs <- loadRuns(paste0(dir, '/runs.txt'))
   groups <- loadGroups(paste0(dir, '/groups.txt'))
-  project <- list(samples = samples, groups=groups)
+  project <- list(subjects = subjects, samples = samples, runs = runs, groups=groups)
   return(project)
 }
 
@@ -331,9 +349,36 @@ getSamplesByGroup <- function(project, groupcol, excluded=c())
 {
   samples <- project$samples
   groups <- project$groups
-  samples <- samples[!(samples$sample %in% exclude_samples),]
+  samples <- samples[!(samples$sample %in% excluded),]
   samples$group <- samples[[paste0('group.', groupcol)]]
   samples <- samples[!is.na(samples$group),]
   samples$group <- factor(samples$group, levels=groups[groups$group==groupcol, 'level'])
   return(samples)
 }
+
+##################################################################
+
+#' getCountsByGroup adjusts the counts and samples to exclude missing samples
+#'
+#' @param counts RNAseq count data
+#' @param project project data containing sample and group information
+#' @param groupcol group column
+#'
+#' @return
+#' @export
+#'
+#' @examples
+getCountsByGroup <- function(counts, project, groupcol)
+{
+  # subset samples non-null for the selected groupcol
+  samples <- hlsgr::getSamplesByGroup(project, groupcol)
+  # susbet the count data to include only samples selected above
+  counts <- counts[, colnames(counts) %in% samples$sample]
+  # makes sure that the sample list also matches samples in the count data
+  samples <- samples[samples$name %in% colnames(counts),]
+  return(list(samples = samples, counts = counts, groupcol = groupcol))
+}
+
+
+
+
