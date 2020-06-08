@@ -27,7 +27,8 @@ Imports:
     R.oo,
     rlang,
     tidyverse,
-    tximport
+    tximport,
+    WGCNA
 Suggests: 
     knitr,
     rmarkdown
