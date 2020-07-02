@@ -266,17 +266,72 @@ analyzeSalmonDeSeq2 <- function(project, txi, groupcol, outdir, protein_only = F
 #' plotHeatmap(result, 10)
 plotDeSeq2Heatmap <- function(result, num=50, fontsize=6, color=colorRampPalette(c("blue", "white", "red"))(50))
 {
-  genes <- rownames(result$res_lfc[order(abs(result$res_lfc$log2FoldChange), decreasing=TRUE), ])[1:num]
-  pheatmap::pheatmap(SummarizedExperiment::assay(result$vsd)[genes,],
-                     cluster_rows=TRUE, show_rownames=TRUE,
+  ensembl_ids <- rownames(result$res_lfc[order(abs(result$res_lfc$log2FoldChange), decreasing=TRUE), ])[1:num]
+  data <- SummarizedExperiment::assay(result$vsd)[ensembl_ids,]
+  rownames(data) <- lookupGenes(ensembl_ids)
+  pheatmap::pheatmap(data, cluster_rows=TRUE, show_rownames=TRUE,
                      cluster_cols=TRUE, show_colnames=FALSE, scale='row',
                      annotation_col=result$annot_col, fontsize_row=fontsize,
                      color=color, clustering_distance_rows="correlation",
                      clustering_method='complete')
 }
 
+########################################
+
+#' Return a vector gene names corresponding to a vector of Ensembl IDs
+#'
+#' @param ensembl_ids vector of ensembl IDs
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' lookupGenes(c('ENSG00000211459', 'ENSG00000211958 '))
+lookupGenes <- function(ensembl_ids)
+{
+  genedf <- unique(txdb$genes[which(txdb$genes$ensembl_id %in% ensembl_ids), c('ensembl_id', 'gene')])
+  rownames(genedf) <- genedf$ensembl_id
+  return(genedf[ensembl_ids, 'gene'])
+}
+
 ####################################################################################
 
+#' Create a formatted table of differentially regulated genes
+#'
+#' @param result DeSeq2 analysis results
+#' @param num max results to show
+#' @param padj cutoff value for adjusted p-value
+#' @param lfc log fold change cutoff (positive or negative)
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' makeDeSeq2Table(result)
+makeDeSeq2Table <- function(result, num=50, padj=1, lfc=1.5)
+{
+  tbl <- result$res_lfc
+  tbl <- tbl[tbl$padj<padj, ]
 
+  if (lfc > 0)
+  {
+    tbl <- tbl[tbl$log2FoldChange>lfc, ]
+    tbl <- tbl[order(tbl$log2FoldChange, decreasing=TRUE), ]
+  }
+  if (lfc < 0)
+  {
+    tbl <- tbl[tbl$log2FoldChange<lfc, ]
+    tbl <- tbl[order(tbl$log2FoldChange), ]
+  }
 
+  tbl$ensembl_id <- rownames(tbl)
+
+  tbl <- merge(as.data.frame(tbl), txdb$genes, by.x='ensembl_id', by.y='ensembl_id')
+  tbl <- tbl[, c("gene", 'description', "log2FoldChange", "pvalue", "padj" )]
+
+  tbl <- tbl[!duplicated(tbl), ]
+
+  tbl <- head(tbl, n=num)
+  return(tbl)
+}
 

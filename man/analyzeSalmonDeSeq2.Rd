@@ -4,7 +4,7 @@
 \alias{analyzeSalmonDeSeq2}
 \title{Analyze Salmon quant data using DeSeq2}
 \usage{
-analyzeSalmonDeSeq2(project, txi, colgroup, outdir, protein_only = FALSE)
+analyzeSalmonDeSeq2(project, txi, groupcol, outdir, protein_only = FALSE)
 }
 \arguments{
 \item{protein_only}{}

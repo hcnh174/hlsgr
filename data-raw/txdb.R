@@ -19,7 +19,7 @@ loadTxdb <- function()
   # also map ensemble_gene_id to entrez_id
   genes <- txdb[,c('ensembl_gene_id', 'entrezgene', 'external_gene_name', 'description')]
   genes <- unique(genes)
-  colnames(genes) <- c('nsembl_id', 'entrez_id', 'gene', 'description')
+  colnames(genes) <- c('ensembl_id', 'entrez_id', 'gene', 'description')
   genes$description <- gsub(' \\[..+', '', genes$description)
   #print(head(genes))
 
