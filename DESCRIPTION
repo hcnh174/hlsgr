@@ -24,6 +24,7 @@ Imports:
     openxlsx,
     pheatmap,
     plyr,
+    R6,
     R.oo,
     rlang,
     tidyverse,
