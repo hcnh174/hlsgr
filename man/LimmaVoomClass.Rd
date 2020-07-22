@@ -12,7 +12,7 @@ R6 class for limma voom analysis
 R6 class for limma voom analysis
 }
 \examples{
-result <- LimmaVoomClass$new(salmon, groupcol, outdir)
+result <- LimmaVoomClass$new(dge, groupcol, outdir)
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -27,14 +27,12 @@ result <- LimmaVoomClass$new(salmon, groupcol, outdir)
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LimmaVoomClass$new(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{LimmaVoomClass$new(project, dge, groupcol, outdir)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{salmon}}{salmon count data}
-
 \item{\code{groupcol}}{category to use for DGE contrasts}
 
 \item{\code{outdir}}{directory to write DGE results to}

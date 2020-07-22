@@ -79,6 +79,37 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
       print(all(rownames(samples) == colnames(counts)))
 
       return(list(samples = samples, counts = counts, groupcol = groupcol))
+    },
+
+    # returns sample columns start with group. - removes prefix and converts to numeric
+    getDatTraits = function(cols)
+    {
+      groups <- unique(self$groups$group)
+      cols <- paste0('group.', groups)
+      datTraits <- self$samples[,cols]
+      colnames(datTraits) <- groups
+      for (group in groups)
+      {
+      	datTraits[[group]] <- factor(datTraits[[group]], levels=self$getGroupLevels(group))
+      }
+      #datTraits <- sapply(datTraits, as.numeric)
+      return(datTraits)
+    },
+
+    createDeseq2ClassFromCounts = function(rnaseq, groupcol, outdir)
+    {
+      countdata <- self$getCountsByGroup(rnaseq, groupcol)
+      counts <- countdata$counts
+      samples <- countdata$samples
+
+      design <- model.matrix(~ samples$group)
+      colnames(design) <- levels(samples$group)
+
+      dds <- DESeq2::DESeqDataSetFromMatrix(countData = counts,
+        colData = samples, design = design)
+
+      deseq2 <- DeSeq2Class$new(dds, outdir)
+      return(deseq2)
     }
    ),
 

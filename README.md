@@ -30,6 +30,12 @@ BiocManager::install("tximport", update=FALSE)
 BiocManager::install("edgeR", update=FALSE)
 BiocManager::install("DESeq2", update=FALSE)
 
+#install.packages("WGCNA")
+#BiocManager::install('GO.db', update=FALSE)
+#BiocManager::install('org.Hs.eg.db', update=FALSE)
+#BiocManager::install('impute', update=FALSE)
+#BiocManager::install('preprocessCore', update=FALSE)
+
 # links and tutorials
 https://r4ds.had.co.nz/tibbles.html
 http://r-pkgs.had.co.nz/tests.html

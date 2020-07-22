@@ -1,26 +1,3 @@
-#install.packages("WGCNA")
-#BiocManager::install('GO.db', update=FALSE)
-#BiocManager::install('org.Hs.eg.db', update=FALSE)
-#BiocManager::install('impute', update=FALSE)
-#BiocManager::install('preprocessCore', update=FALSE)
-
-#library(hlsgr)
-#library(ggbio)
-#library(edgeR)
-#library(pheatmap)
-#library(WGCNA)
-
-#options(stringsAsFactors = FALSE)
-
-#library(hlsgr)
-#library(ggbio)
-#library(edgeR)
-#library(WGCNA)
-#library(fields)
-#library(R6)
-
-#options(stringsAsFactors = FALSE)
-
 #' create R6 class method for WGCNA
 #'
 #' @param result
@@ -30,11 +7,11 @@
 #'
 #' @examples
 #' wgcna <- WgcnaClass$new(result, datTraits)
-
 WgcnaClass <- R6::R6Class("WgcnaClass",
 
   public = list(
 
+    identifier = NULL,
     powers = c(c(1:10), seq(from = 12, to=20, by=2)),
     data = NULL,
     datTraits = NULL,
@@ -47,24 +24,16 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
     moduleColors = NULL,
     hubgenes = NULL,
 
-    initialize = function(rnaseq, datTraits)
+    initialize = function(rnaseq, datTraits, identifier='ensembl_id')
     {
-      #rnaseq <- SummarizedExperiment::assay(result$vsd)
-      #degene <- rownames(result$res_lfc)
-      #rnaseq <- if(degenes_only) rnaseq[rownames(rnaseq) %in% degene, ] else rnaseq
-
       rnaseq <- private$checkMissing(rnaseq)
-      #self$gsg <- WGCNA::goodSamplesGenes(rnaseq, verbose = 3)
-      #print(self$gsg$allOK)
-
-      #if (nrow(rnaseq) > nGenes)
-      #  rnaseq <- rnaseq[order(apply(rnaseq, 1, mad), decreasing = TRUE)[1:nGenes],]
 
       wgcna_matrix <- t(rnaseq)
       print(dim(wgcna_matrix))
       sampleTree <- hclust(dist(wgcna_matrix), method = 'average')
       #datTraits <- private$prepareDatTraits(wgcna_matrix, project, group)
 
+      self$identifier <- identifier
       self$data <- rnaseq
       self$matrix <- wgcna_matrix
       self$datTraits <- datTraits
@@ -72,32 +41,6 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
 
       invisible(self)
     },
-
-    # initialize = function(result, datTraits, degenes_only=FALSE, nGenes=5000)
-    # {
-    #   rnaseq <- SummarizedExperiment::assay(result$vsd)
-    #   degene <- rownames(result$res_lfc)
-    #   rnaseq <- if(degenes_only) rnaseq[rownames(rnaseq) %in% degene, ] else rnaseq
-    #
-    #   rnaseq <- private$checkMissing(rnaseq)
-    #   self$gsg <- WGCNA::goodSamplesGenes(rnaseq, verbose = 3)
-    #   print(self$gsg$allOK)
-    #
-    #   if (nrow(rnaseq) > nGenes)
-    #     rnaseq <- rnaseq[order(apply(rnaseq, 1, mad), decreasing = TRUE)[1:nGenes],]
-    #
-    #   wgcna_matrix <- t(rnaseq)
-    #   print(dim(wgcna_matrix))
-    #   sampleTree <- hclust(dist(wgcna_matrix), method = 'average')
-    #   #datTraits <- private$prepareDatTraits(wgcna_matrix, project, group)
-    #
-    #   self$data <- rnaseq
-    #   self$matrix <- wgcna_matrix
-    #   self$datTraits <- datTraits
-    #   self$sampleTree <- sampleTree
-    #
-    #   invisible(self)
-    # },
 
     plotSampleTree = function()
     {
@@ -227,7 +170,6 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
 
     plotModuleTraitRelationship = function()
     {
-      #moduleColors <- WGCNA::labels2colors(self$net$colors)
       MEs0 <- moduleEigengenes(self$matrix, self$moduleColors)$eigengenes
 
       MEs <- orderMEs(MEs0)
@@ -238,89 +180,98 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       textMatrix <- paste(signif(moduleTraitCor, 2), "\n(",signif(moduleTraitPvalue, 1), ")", sep = "")
       dim(textMatrix) <- dim(moduleTraitCor)
 
-      if(dim(moduleTraitCor)[2] > 1){
+      if(dim(moduleTraitCor)[2] > 1)
+      {
         # Display the correlation values within a heatmap plot
-        labeledHeatmap(Matrix = moduleTraitCor,xLabels = names(self$datTraits),yLabels = names(MEs),ySymbols = names(MEs),colorLabels = FALSE,colors = blueWhiteRed(50),colorMatrix = NULL,textMatrix = textMatrix,setStdMargins = FALSE,cex.text = 0.5,zlim = c(-1,1),main = paste("Module-trait relationships"))
-      }else{
-        #only trait data is one colomn(eg. Control(0) and Case(1))
-        image.plot(moduleTraitCor, xaxt="n", yaxt="n",col=colorRampPalette(c("blue", "white", "red"))(50), main = paste("Module-trait relationships"), breaks=seq(-max(moduleTraitCor),max(moduleTraitCor),2*max(moduleTraitCor)/50))
-        axis(side=1,at=seq(0,1, 1/(nrow(moduleTraitCor)-1)),labels=rownames(moduleTraitCor), las=2)
-        axis(side=1,at=seq(0,1, 1/(nrow(moduleTraitCor)-1)),labels=textMatrix, pos=0.2, font=2, tick=FALSE)
-        axis(side=2,at=0,labels="Control vs Case")
-
-      }},
+        WGCNA::labeledHeatmap(Matrix = moduleTraitCor, xLabels = colnames(self$datTraits),
+        yLabels = names(MEs), ySymbols = names(MEs), colorLabels = FALSE,
+        colors = blueWhiteRed(50), colorMatrix = NULL, textMatrix = textMatrix,
+        setStdMargins = TRUE, cex.text = 0.5, cex.lab = 0.7, zlim = c(-1,1),
+        main = paste("Module-trait relationships"))
+      }
+      else
+      {
+        #only trait data is one column(eg. Control(0) and Case(1))
+        image.plot(moduleTraitCor, xaxt="n", yaxt="n", col=colorRampPalette(c("blue", "white", "red"))(50),
+        main = paste("Module-trait relationships"),
+        breaks=seq(-max(moduleTraitCor), max(moduleTraitCor), 2*max(moduleTraitCor)/50))
+        axis(side=1, at=seq(0,1, 1/(nrow(moduleTraitCor)-1)), labels=rownames(moduleTraitCor), las=2)
+        axis(side=1, at=seq(0,1, 1/(nrow(moduleTraitCor)-1)), labels=textMatrix, font=2, pos=0.2, tick=FALSE)
+        axis(side=2, at=0, labels="Control vs Case")
+      }
+    },
 
     selectHubs = function()
     {
       hub <- WGCNA::chooseTopHubInEachModule(self$matrix, self$moduleColors,
-                                             power = self$sft$powerEstimate)
-      hub <- data.frame(nsembl_id=hub)
-      annot <- hlsgr::txdb$gene[,c('nsembl_id', 'gene', 'description')]
-      hubgenes <- merge(hub, annot, by="nsembl_id", sort=FALSE)
+                                         power = self$sft$powerEstimate)
+      hub <- data.frame(hub)
+      colnames(hub) <- self$identifier
+      annot <- txdb$gene[,c('ensembl_id', 'gene', 'description')]
+      hubgenes <- merge(hub, annot, by=self$identifier, sort=FALSE)
       rownames(hubgenes) <- rownames(hub)
       self$hubgenes <- hubgenes
+      outfile <- paste0(outdir, '/hubgenes.txt')
+      writeTable(self$hubgenes, outfile, row.names=TRUE)
       invisible(self)
     },
 
     goEnrichmentAnalysis = function()
     {
-      annot <- hlsgr::txdb$gene[,c("nsembl_id", "entrez_id", "gene")]
+      annot <- txdb$gene[,c("ensembl_id", "entrez_id", "gene")]
       # Match probes in the data set to the probe IDs in the annotation file
       probes <- colnames(self$matrix)
-      probes2annot <-  match(probes, annot$nsembl_id)
+      probes2annot <-  match(probes, annot[[self$identifier]])
       # Get the corresponding Locuis Link IDs
       allLLIDs <- annot$entrez_id[probes2annot]
-      # $ Choose interesting modules
+      # Choose interesting modules
       #intModules = c("brown", "red", "salmon")
       intModules <- unique(self$moduleColors[self$moduleColors != "grey"])
 
       ###Enrichment analysis directly within R
       go <- WGCNA::GOenrichmentAnalysis(self$moduleColors, allLLIDs, organism = "human", nBestP = 10)
       tab <- go$bestPTerms[[4]]$enrichment
-      names(tab)
-
-      screenTab <- tab[, c(1, 2, 5, 6, 7, 12, 13)]
+      screenTab <- tab[, c('module', 'modSize', 'enrichmentP', 'BonferoniP', 'nModGenesInTerm', 'termOntology', 'termName')]
       # Round the numeric columns to 2 decimal places:
-      numericColumns <- c(3, 4)
+      numericColumns <- c('enrichmentP', 'BonferoniP')
       screenTab[, numericColumns] <- signif(apply(screenTab[, numericColumns], 2, as.numeric), 2)
       # Truncate the the term name to at most 40 characters
-      screenTab[, 7] <- substring(screenTab[, 7], 1, 40)
+      screenTab[, 'termName'] <- substring(screenTab[, 'termName'], 1, 40)
       # Shorten the column names:
       colnames(screenTab) <- c("module", "size", "p-val", "Bonf", "nInTerm", "ont", "term name")
       rownames(screenTab) <- NULL
+      outfile <- paste0(outdir, '/go_enrichment.txt')
+      writeTable(screenTab, outfile)
       return(screenTab)
     },
 
+    #Export Cytoscape
     exportCytoscape = function(threshold = 0.02)
     {
-      #Export Cytoscape
       # Recalculate topological overlap if needed
-      TOM = TOMsimilarityFromExpr(self$matrix, power = self$sft$powerEstimate, verbose = 3)
+      TOM <- WGCNA::TOMsimilarityFromExpr(self$matrix, power = self$sft$powerEstimate, verbose = 3)
       # Read in the annotation file
-      annot = hlsgr::txdb$gene[,c("nsembl_id","gene")]
-      colors = unique(self$moduleColors)
-      unique_colors = colors[colors != "grey"]
-      #unique_colors = colors
+      annot <- txdb$gene[,c("ensembl_id","gene")]
+      colors <- unique(self$moduleColors)
+      unique_colors <- colors[colors != "grey"]
       for (module in unique_colors)
       {
-        # Select modules
-        #modules = c("brown", "red")
         # Select module probes
-        probes = colnames(self$matrix)
-        inModule = is.finite(match(self$moduleColors, module))
-        modProbes = probes[inModule]
-        modGenes = annot$gene[match(modProbes, annot$nsembl_id)]
+        probes <- colnames(self$matrix)
+        inModule <- is.finite(match(self$moduleColors, module))
+        modProbes <- probes[inModule]
+        modGenes <- annot$gene[match(modProbes, annot[[self$identifier]])]
+
         # Select the corresponding Topological Overlap
-        modTOM = TOM[inModule, inModule]
-        dimnames(modTOM) = list(modProbes, modProbes)
+        modTOM <- TOM[inModule, inModule]
+        dimnames(modTOM) <- list(modProbes, modProbes)
+
         # Export the network into edge and node list files Cytoscape can read
-        cyt = exportNetworkToCytoscape(modTOM,
-                                       edgeFile = paste(outdir, "/CytoscapeInput-edges-", paste(module, collapse="-"), ".txt", sep=""),
-                                       nodeFile = paste(outdir, "/CytoscapeInput-nodes-", paste(module, collapse="-"), ".txt", sep=""),
-                                       weighted = TRUE,threshold = threshold,
-                                       nodeNames = modProbes,
-                                       altNodeNames = modGenes,
-                                       nodeAttr = self$moduleColors[inModule])
+        edgeFile <- paste0(outdir, '/CytoscapeInput-edges-', module, '.txt')
+        nodeFile <- paste0(outdir, '/CytoscapeInput-nodes-', module, '.txt')
+        cyt <- exportNetworkToCytoscape(modTOM, edgeFile = edgeFile, nodeFile = nodeFile,
+          weighted = TRUE, threshold = threshold, nodeNames = modProbes,
+          altNodeNames = modGenes, nodeAttr = self$moduleColors[inModule])
       }
     }
   ),
@@ -343,13 +294,14 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       }
       self$gsg <- gsg
       return(datExpr)
-    },
-
-    prepareDatTraits = function(wgcna_matrix, project, group)
-    {
-      samples <- hlsgr::getSamplesByGroup(project, group)
-      samples <- samples[rownames(samples) %in% rownames(wgcna_matrix), ]
-      return(samples)
     }
+
+    # prepareDatTraits = function(wgcna_matrix, project, group)
+    # {
+    #   samples <- hlsgr::getSamplesByGroup(project, group)
+    #   samples <- samples[rownames(samples) %in% rownames(wgcna_matrix), ]
+    #   return(samples)
+    # }
   )
 )
+

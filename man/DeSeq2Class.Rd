@@ -13,6 +13,14 @@ R6 class for DESeq2 analysis
 }
 \examples{
 project <- DeSeq2Class$new(salmon, groupcol, outdir)
+createWgcnaClass
+
+
+## ------------------------------------------------
+## Method `DeSeq2Class$createWgcnaClassFromDeseq2`
+## ------------------------------------------------
+
+wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE, ngenes=5000)
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -20,6 +28,7 @@ project <- DeSeq2Class$new(salmon, groupcol, outdir)
 \item \href{#method-new}{\code{DeSeq2Class$new()}}
 \item \href{#method-getResults}{\code{DeSeq2Class$getResults()}}
 \item \href{#method-makeTable}{\code{DeSeq2Class$makeTable()}}
+\item \href{#method-createWgcnaClassFromDeseq2}{\code{DeSeq2Class$createWgcnaClassFromDeseq2()}}
 \item \href{#method-clone}{\code{DeSeq2Class$clone()}}
 }
 }
@@ -28,16 +37,12 @@ project <- DeSeq2Class$new(salmon, groupcol, outdir)
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$new(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$new(dds, outdir)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{salmon}}{salmon count data}
-
-\item{\code{groupcol}}{category to use for DGE contrasts}
-
 \item{\code{outdir}}{directory to write DGE results to}
 }
 \if{html}{\out{</div>}}
@@ -48,7 +53,7 @@ project <- DeSeq2Class$new(salmon, groupcol, outdir)
 \if{latex}{\out{\hypertarget{method-getResults}{}}}
 \subsection{Method \code{getResults()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$getResults(p = NULL, padj = 0.05, logfc = 1.5)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$getResults(p = NULL, padj = 0.05, logfc = 1.5, n = NULL)}\if{html}{\out{</div>}}
 }
 
 }
@@ -58,6 +63,36 @@ project <- DeSeq2Class$new(salmon, groupcol, outdir)
 \subsection{Method \code{makeTable()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$makeTable(num = 50, padj = 1, lfc = 1.5)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createWgcnaClassFromDeseq2"></a>}}
+\if{latex}{\out{\hypertarget{method-createWgcnaClassFromDeseq2}{}}}
+\subsection{Method \code{createWgcnaClassFromDeseq2()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$createWgcnaClassFromDeseq2(
+  datTraits,
+  p = NULL,
+  padj = NULL,
+  logfc = NULL,
+  n = 5000
+)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{datTraits}}{}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE, ngenes=5000)
+}
+\if{html}{\out{</div>}}
+
 }
 
 }

@@ -30,6 +30,9 @@ getSamplesByGroup
 \item \href{#method-new}{\code{NgsProjectClass$new()}}
 \item \href{#method-getGroupLevels}{\code{NgsProjectClass$getGroupLevels()}}
 \item \href{#method-getSamplesByGroup}{\code{NgsProjectClass$getSamplesByGroup()}}
+\item \href{#method-getCountsByGroup}{\code{NgsProjectClass$getCountsByGroup()}}
+\item \href{#method-getDatTraits}{\code{NgsProjectClass$getDatTraits()}}
+\item \href{#method-createDeseq2ClassFromCounts}{\code{NgsProjectClass$createDeseq2ClassFromCounts()}}
 \item \href{#method-clone}{\code{NgsProjectClass$clone()}}
 }
 }
@@ -96,6 +99,33 @@ getSamplesByGroup
 \subsection{Returns}{
 
 }
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getCountsByGroup"></a>}}
+\if{latex}{\out{\hypertarget{method-getCountsByGroup}{}}}
+\subsection{Method \code{getCountsByGroup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$getCountsByGroup(counts, groupcol)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getDatTraits"></a>}}
+\if{latex}{\out{\hypertarget{method-getDatTraits}{}}}
+\subsection{Method \code{getDatTraits()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$getDatTraits(cols)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createDeseq2ClassFromCounts"></a>}}
+\if{latex}{\out{\hypertarget{method-createDeseq2ClassFromCounts}{}}}
+\subsection{Method \code{createDeseq2ClassFromCounts()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromCounts(rnaseq, groupcol, outdir)}\if{html}{\out{</div>}}
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
