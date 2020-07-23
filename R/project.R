@@ -9,7 +9,9 @@
 #' project <- NgsProjectClass$new(projectdir)
 NgsProjectClass <- R6::R6Class("NgsProjectClass",
 
-   public = list(
+  inherit = AbstractBaseClass,
+
+  public = list(
 
      subjects = NULL,
      samples = NULL,
@@ -108,6 +110,19 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
       dds <- DESeq2::DESeqDataSetFromMatrix(countData = counts,
         colData = samples, design = design)
 
+      deseq2 <- DeSeq2Class$new(dds, outdir)
+      return(deseq2)
+    },
+
+    createDeseq2ClassFromSalmon = function(salmon, groupcol, outdir)
+    {
+      samples <- self$getSamplesByGroup(groupcol)
+
+      design <- model.matrix(~ samples$group)
+      colnames(design) <- levels(samples$group)
+
+      dds <- DESeq2::DESeqDataSetFromTximport(txi = salmon$txi, colData = samples,
+                                              design = design)
       deseq2 <- DeSeq2Class$new(dds, outdir)
       return(deseq2)
     }

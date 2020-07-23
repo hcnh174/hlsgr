@@ -24,6 +24,9 @@ getGroupLevels(project, groupcol='default')
 getSamplesByGroup
 
 }
+\section{Super class}{
+\code{\link[hlsgr:AbstractBaseClass]{hlsgr::AbstractBaseClass}} -> \code{NgsProjectClass}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -33,8 +36,15 @@ getSamplesByGroup
 \item \href{#method-getCountsByGroup}{\code{NgsProjectClass$getCountsByGroup()}}
 \item \href{#method-getDatTraits}{\code{NgsProjectClass$getDatTraits()}}
 \item \href{#method-createDeseq2ClassFromCounts}{\code{NgsProjectClass$createDeseq2ClassFromCounts()}}
+\item \href{#method-createDeseq2ClassFromSalmon}{\code{NgsProjectClass$createDeseq2ClassFromSalmon()}}
 \item \href{#method-clone}{\code{NgsProjectClass$clone()}}
 }
+}
+\if{html}{
+\out{<details open ><summary>Inherited methods</summary>}
+\itemize{
+}
+\out{</details>}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
@@ -124,6 +134,15 @@ getSamplesByGroup
 \subsection{Method \code{createDeseq2ClassFromCounts()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromCounts(rnaseq, groupcol, outdir)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createDeseq2ClassFromSalmon"></a>}}
+\if{latex}{\out{\hypertarget{method-createDeseq2ClassFromSalmon}{}}}
+\subsection{Method \code{createDeseq2ClassFromSalmon()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromSalmon(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
 }
 
 }

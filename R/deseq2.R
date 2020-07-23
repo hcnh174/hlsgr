@@ -11,28 +11,22 @@
 #' project <- DeSeq2Class$new(salmon, groupcol, outdir)
 DeSeq2Class <- R6::R6Class("DeSeq2Class",
 
+  inherit = AbstractDifferentialExpressionAnalysisClass,
+
   public = list(
 
-    #salmon = NULL,
-    #samples = NULL,
     dds = NULL,
-    #design = NULL,
     results = NULL,
     groupname = NULL,
     outdir = NULL,
-    #outfile = NULL,
     vsd = NULL,
     mds = NULL,
     annot_col = NULL,
 
     initialize = function(dds, outdir)
     {
-      #samples <- salmon$project$getSamplesByGroup(groupcol)
-      #salmon <- salmon$subset(samples=samples$name)
-
-      # create the design matrix
-      #design <- model.matrix(~samples$group)
-      #print(design)
+      super$initialize()
+      print('DeSeq2Class')
 
       # https://angus.readthedocs.io/en/2019/diff-ex-and-viz.html
       #dds <- DESeq2::DESeqDataSetFromTximport(txi = salmon$txi, colData = samples, design = design)
@@ -40,7 +34,7 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
       results <- DESeq2::results(dds)
       results <- results[order(results$log2FoldChange, decreasing=TRUE), ]
 
-      groupname <- tolower(substring(colnames(dds$design)[2], 14))
+      groupname <- tolower(colnames(dds@design)[2])
       outfile <- paste0(outdir, '/table-deseq2-group-',groupname,'.txt')
       writeTable(as.data.frame(results), outfile, row.names=TRUE)
 
@@ -50,10 +44,8 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
       mdsData <- data.frame(cmdscale(sample_dists))
       mds <- cbind(mdsData, as.data.frame(SummarizedExperiment::colData(vsd))) # combine with sample data
 
-      annot_col <- samples[,c('sample', 'group')] %>% dplyr::select(group) %>% as.data.frame()
+      annot_col <- as.data.frame(dds@colData[, 'group'])
 
-      #self$salmon <- salmon
-      #self$samples <- samples
       self$dds <- dds
       self$results <- results
       self$mds <- mds
@@ -113,7 +105,7 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
       if (!is.null(n) && nrow(results)>n)
       {
         results <- results[order(abs(results$log2FoldChange), decreasing=TRUE), ]
-        results <- head(results, n=ngenes)
+        results <- head(results, n=n)
         results <- results[order(results$log2FoldChange, decreasing=TRUE), ]
       }
       return(results)
@@ -154,8 +146,8 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
     #' @export
     #'
     #' @examples
-    #' wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE, ngenes=5000)
-    createWgcnaClassFromDeseq2 = function(datTraits, p=NULL, padj=NULL, logfc=NULL, n=5000)
+    #' wgcna <- deseq2$createWgcnaClass(datTraits)
+    createWgcnaClass = function(datTraits, p=NULL, padj=NULL, logfc=NULL, n=5000)
     {
       result <- self$getResults(p=p, padj=padj, logfc=logfc, n=n)
       rnaseq <- SummarizedExperiment::assay(self$vsd)

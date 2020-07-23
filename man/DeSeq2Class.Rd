@@ -17,10 +17,13 @@ createWgcnaClass
 
 
 ## ------------------------------------------------
-## Method `DeSeq2Class$createWgcnaClassFromDeseq2`
+## Method `DeSeq2Class$createWgcnaClass`
 ## ------------------------------------------------
 
-wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE, ngenes=5000)
+wgcna <- deseq2$createWgcnaClass(datTraits)
+}
+\section{Super classes}{
+\code{\link[hlsgr:AbstractBaseClass]{hlsgr::AbstractBaseClass}} -> \code{\link[hlsgr:AbstractDifferentialExpressionAnalysisClass]{hlsgr::AbstractDifferentialExpressionAnalysisClass}} -> \code{DeSeq2Class}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -28,9 +31,15 @@ wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE,
 \item \href{#method-new}{\code{DeSeq2Class$new()}}
 \item \href{#method-getResults}{\code{DeSeq2Class$getResults()}}
 \item \href{#method-makeTable}{\code{DeSeq2Class$makeTable()}}
-\item \href{#method-createWgcnaClassFromDeseq2}{\code{DeSeq2Class$createWgcnaClassFromDeseq2()}}
+\item \href{#method-createWgcnaClass}{\code{DeSeq2Class$createWgcnaClass()}}
 \item \href{#method-clone}{\code{DeSeq2Class$clone()}}
 }
+}
+\if{html}{
+\out{<details open ><summary>Inherited methods</summary>}
+\itemize{
+}
+\out{</details>}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
@@ -67,11 +76,11 @@ wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE,
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-createWgcnaClassFromDeseq2"></a>}}
-\if{latex}{\out{\hypertarget{method-createWgcnaClassFromDeseq2}{}}}
-\subsection{Method \code{createWgcnaClassFromDeseq2()}}{
+\if{html}{\out{<a id="method-createWgcnaClass"></a>}}
+\if{latex}{\out{\hypertarget{method-createWgcnaClass}{}}}
+\subsection{Method \code{createWgcnaClass()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$createWgcnaClassFromDeseq2(
+\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$createWgcnaClass(
   datTraits,
   p = NULL,
   padj = NULL,
@@ -89,7 +98,7 @@ wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE,
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
-\preformatted{wgcna <- createWgcnaClassFromDeseq2(vsd, res_lfc, datTraits, degenes_only=FALSE, ngenes=5000)
+\preformatted{wgcna <- deseq2$createWgcnaClass(datTraits)
 }
 \if{html}{\out{</div>}}
 
