@@ -31,7 +31,6 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       wgcna_matrix <- t(rnaseq)
       print(dim(wgcna_matrix))
       sampleTree <- hclust(dist(wgcna_matrix), method = 'average')
-      #datTraits <- private$prepareDatTraits(wgcna_matrix, project, group)
 
       self$identifier <- identifier
       self$data <- rnaseq
@@ -85,10 +84,11 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       sampleTree2 <- hclust(dist(self$matrix), method = "average")
 
       # Convert traits to a color representation: white means low, red means high, grey means missing entry
-      traitColors = WGCNA::numbers2colors(self$datTraits, signed = signed)
+      datTraits <- sapply(self$datTraits, as.numeric)
+      traitColors = WGCNA::numbers2colors(datTraits, signed = signed)
 
       # Plot the sample dendrogram and the colors underneath.
-      WGCNA::plotDendroAndColors(sampleTree2, traitColors, groupLabels = names(self$datTraits),
+      WGCNA::plotDendroAndColors(sampleTree2, traitColors, groupLabels = names(datTraits),
                                  main = "Sample dendrogram and trait heatmap")
     },
 
@@ -173,7 +173,8 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       MEs0 <- moduleEigengenes(self$matrix, self$moduleColors)$eigengenes
 
       MEs <- orderMEs(MEs0)
-      moduleTraitCor <- cor(MEs, self$datTraits, use = "p")
+      datTraits <- sapply(self$datTraits, as.numeric)
+      moduleTraitCor <- cor(MEs, datTraits, use = "p")
       moduleTraitPvalue <- corPvalueStudent(moduleTraitCor, nrow(self$matrix))
 
       # Will display correlations and their p-values
@@ -183,7 +184,7 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       if(dim(moduleTraitCor)[2] > 1)
       {
         # Display the correlation values within a heatmap plot
-        WGCNA::labeledHeatmap(Matrix = moduleTraitCor, xLabels = colnames(self$datTraits),
+        WGCNA::labeledHeatmap(Matrix = moduleTraitCor, xLabels = colnames(datTraits),
         yLabels = names(MEs), ySymbols = names(MEs), colorLabels = FALSE,
         colors = blueWhiteRed(50), colorMatrix = NULL, textMatrix = textMatrix,
         setStdMargins = TRUE, cex.text = 0.5, cex.lab = 0.7, zlim = c(-1,1),
@@ -295,13 +296,6 @@ WgcnaClass <- R6::R6Class("WgcnaClass",
       self$gsg <- gsg
       return(datExpr)
     }
-
-    # prepareDatTraits = function(wgcna_matrix, project, group)
-    # {
-    #   samples <- hlsgr::getSamplesByGroup(project, group)
-    #   samples <- samples[rownames(samples) %in% rownames(wgcna_matrix), ]
-    #   return(samples)
-    # }
   )
 )
 

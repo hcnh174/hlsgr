@@ -16,17 +16,18 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
   public = list(
 
     dds = NULL,
+    identifier = NULL,
     results = NULL,
     groupname = NULL,
-    outdir = NULL,
+    #outdir = NULL,
     vsd = NULL,
     mds = NULL,
     annot_col = NULL,
 
-    initialize = function(dds, outdir)
+    initialize = function(dds, outdir, identifier='ensembl_id')
     {
       super$initialize()
-      print('DeSeq2Class')
+      print(concat0('DeSeq2Class: outdir=', outdir, ' identifier=', identifier))
 
       # https://angus.readthedocs.io/en/2019/diff-ex-and-viz.html
       #dds <- DESeq2::DESeqDataSetFromTximport(txi = salmon$txi, colData = samples, design = design)
@@ -46,6 +47,7 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
 
       annot_col <- as.data.frame(dds@colData[, 'group'])
 
+      self$identifier <- identifier
       self$dds <- dds
       self$results <- results
       self$mds <- mds
@@ -53,44 +55,6 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
       self$annot_col <- annot_col
       invisible(self)
     },
-
-    # initialize = function(salmon, groupcol, outdir)
-    # {
-    #   samples <- salmon$project$getSamplesByGroup(groupcol)
-    #   salmon <- salmon$subset(samples=samples$name)
-    #
-    #   # create the design matrix
-    #   design <- model.matrix(~samples$group)
-    #   print(design)
-    #
-    #   # https://angus.readthedocs.io/en/2019/diff-ex-and-viz.html
-    #   dds <- DESeq2::DESeqDataSetFromTximport(txi = salmon$txi, colData = samples, design = design)
-    #   dds <- DESeq2::DESeq(dds)
-    #   results <- DESeq2::results(dds)
-    #   results <- results[order(results$log2FoldChange, decreasing=TRUE), ]
-    #
-    #   groupname <- tolower(substring(colnames(design)[2], 14))
-    #   outfile <- paste0(outdir, '/table-deseq2-group-',groupname,'.txt')
-    #   writeTable(as.data.frame(res), outfile, row.names=TRUE)
-    #
-    #   vsd <- DESeq2::vst(dds)
-    #   sample_dists <- SummarizedExperiment::assay(vsd) %>% t() %>% dist() %>% as.matrix()
-    #
-    #   mdsData <- data.frame(cmdscale(sample_dists))
-    #   mds <- cbind(mdsData, as.data.frame(SummarizedExperiment::colData(vsd))) # combine with sample data
-    #
-    #   annot_col <- samples[,c('sample', 'group')] %>% dplyr::select(group) %>% as.data.frame()
-    #
-    #   self$salmon <- salmon
-    #   self$samples <- samples
-    #   self$dds <- dds
-    #   self$results <- results
-    #   self$mds <- mds
-    #   self$vsd <- vsd
-    #   self$annot_col <- annot_col
-    #   invisible(self)
-    #   #return(list(salmon=salmon, samples=samples, dds=dds, res=res, res_lfc=res_lfc, mds=mds, vsd=vsd, annot_col=annot_col))
-    # },
 
     getResults = function(p=NULL, padj=0.05, logfc=1.5, n=NULL)
     {
@@ -150,8 +114,12 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
     createWgcnaClass = function(datTraits, p=NULL, padj=NULL, logfc=NULL, n=5000)
     {
       result <- self$getResults(p=p, padj=padj, logfc=logfc, n=n)
+      print(paste0('dim(result) with n=', n, ': ', dim(result)))
       rnaseq <- SummarizedExperiment::assay(self$vsd)
-      wgcna <- hlsgr::WgcnaClass$new(rnaseq, datTraits)
+      print(paste0('dim(rnaseq) before: ', dim(rnaseq)))
+      rnaseq <- rnaseq[rownames(result), ]
+      print(paste0('dim(rnaseq) after: ', dim(rnaseq)))
+      wgcna <- hlsgr::WgcnaClass$new(rnaseq, datTraits, identifier = self$identifier)
       return(wgcna)
     }
 

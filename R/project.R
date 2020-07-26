@@ -98,7 +98,7 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
       return(datTraits)
     },
 
-    createDeseq2ClassFromCounts = function(rnaseq, groupcol, outdir)
+    createDeseq2ClassFromCounts = function(rnaseq, groupcol, outdir, identifier='ensembl_id')
     {
       countdata <- self$getCountsByGroup(rnaseq, groupcol)
       counts <- countdata$counts
@@ -110,7 +110,7 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
       dds <- DESeq2::DESeqDataSetFromMatrix(countData = counts,
         colData = samples, design = design)
 
-      deseq2 <- DeSeq2Class$new(dds, outdir)
+      deseq2 <- DeSeq2Class$new(dds, outdir, identifier = identifier)
       return(deseq2)
     },
 

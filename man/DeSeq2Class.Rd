@@ -46,7 +46,7 @@ wgcna <- deseq2$createWgcnaClass(datTraits)
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$new(dds, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{DeSeq2Class$new(dds, outdir, identifier = "ensembl_id")}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{

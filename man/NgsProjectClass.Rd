@@ -133,7 +133,12 @@ getSamplesByGroup
 \if{latex}{\out{\hypertarget{method-createDeseq2ClassFromCounts}{}}}
 \subsection{Method \code{createDeseq2ClassFromCounts()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromCounts(rnaseq, groupcol, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromCounts(
+  rnaseq,
+  groupcol,
+  outdir,
+  identifier = "ensembl_id"
+)}\if{html}{\out{</div>}}
 }
 
 }
