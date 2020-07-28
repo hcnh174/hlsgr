@@ -123,6 +123,11 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
       return(wgcna)
     }
 
+    # createMixomicsClass = function()
+    # {
+    #   mixomics <- MixomicsClass$new(self$dds)
+    # }
+
     # getSigCounts <- function(padg=0.05, logfc=1)
     # {
     #   results <- results[results$padj<padj, ]
