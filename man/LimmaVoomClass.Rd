@@ -27,14 +27,12 @@ result <- LimmaVoomClass$new(dge, groupcol, outdir)
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LimmaVoomClass$new(project, dge, groupcol, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{LimmaVoomClass$new(dge, samples, outdir)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{groupcol}}{category to use for DGE contrasts}
-
 \item{\code{outdir}}{directory to write DGE results to}
 }
 \if{html}{\out{</div>}}

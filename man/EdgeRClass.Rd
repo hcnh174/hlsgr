@@ -14,6 +14,9 @@ R6 class for EdgeR analysis
 \examples{
 project <- EdgeRClass$new(salmon, groupcol, outdir)
 }
+\section{Super classes}{
+\code{\link[hlsgr:AbstractBaseClass]{hlsgr::AbstractBaseClass}} -> \code{\link[hlsgr:AbstractDifferentialExpressionAnalysisClass]{hlsgr::AbstractDifferentialExpressionAnalysisClass}} -> \code{EdgeRClass}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
@@ -22,19 +25,23 @@ project <- EdgeRClass$new(salmon, groupcol, outdir)
 \item \href{#method-clone}{\code{EdgeRClass$clone()}}
 }
 }
+\if{html}{
+\out{<details open ><summary>Inherited methods</summary>}
+\itemize{
+}
+\out{</details>}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{EdgeRClass$new(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{EdgeRClass$new(dge, samples, groupcol, outdir)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{salmon}}{salmon count data}
-
 \item{\code{groupcol}}{category to use for DGE contrasts}
 
 \item{\code{outdir}}{directory to write DGE results to}

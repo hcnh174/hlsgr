@@ -20,18 +20,19 @@
 #' project <- EdgeRClass$new(salmon, groupcol, outdir)
 EdgeRClass <- R6::R6Class("EdgeRClass",
 
+  inherit = AbstractDifferentialExpressionAnalysisClass,
+
   public = list(
 
-    salmon = NULL,
     samples = NULL,
     design = NULL,
     fit = NULL,
 
-    initialize = function(salmon, groupcol, outdir)
+    initialize = function(dge, samples, groupcol, outdir)
     {
       #https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html#edgeR
-      samples <- salmon$project$getSamplesByGroup(groupcol)
-      salmon <- salmon$subset(samples=samples$name)
+      #samples <- salmon$project$getSamplesByGroup(groupcol)
+      #salmon <- salmon$subset(samples=samples$name)
 
       #files <- stringr::str_replace(salmon$files, '/quant.sf', '')
       #quants <- edgeR::catchSalmon(files)
@@ -72,7 +73,7 @@ EdgeRClass <- R6::R6Class("EdgeRClass",
       #dge <- edgeR::DGEList(counts=cpms, group=samples$group)
 
       # https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
-      dge <- edgeR::DGEList(counts=salmon$txi$counts, group=samples$group)
+      #dge <- edgeR::DGEList(counts=salmon$txi$counts, group=samples$group)
 
       # create a design matrix
       #design <- model.matrix(~ 0+samples$group)
@@ -96,7 +97,6 @@ EdgeRClass <- R6::R6Class("EdgeRClass",
       outfile <- paste0(outdir, '/table-edger-group-',groupname,'.txt')
       hlsgr::writeTable(tbl, outfile, row.names=TRUE)
 
-      self$salmon <- salmon
       self$samples <- samples
       self$design <- design
       self$fit <- fit

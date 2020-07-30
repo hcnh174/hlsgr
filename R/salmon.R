@@ -7,8 +7,10 @@
 #' @export
 #'
 #' @examples
-#' project <- NgsProjectClass$new(projectdir)
+#' project <- SalmonClass$new(project, quantdir)
 SalmonClass <- R6::R6Class("SalmonClass",
+
+  inherit = RnaSeqCountDataClass,
 
   public = list(
 

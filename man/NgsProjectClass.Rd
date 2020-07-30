@@ -37,6 +37,10 @@ getSamplesByGroup
 \item \href{#method-getDatTraits}{\code{NgsProjectClass$getDatTraits()}}
 \item \href{#method-createDeseq2ClassFromCounts}{\code{NgsProjectClass$createDeseq2ClassFromCounts()}}
 \item \href{#method-createDeseq2ClassFromSalmon}{\code{NgsProjectClass$createDeseq2ClassFromSalmon()}}
+\item \href{#method-createEdgeRClassFromCounts}{\code{NgsProjectClass$createEdgeRClassFromCounts()}}
+\item \href{#method-createEdgeRClassFromSalmon}{\code{NgsProjectClass$createEdgeRClassFromSalmon()}}
+\item \href{#method-createLimmaVoomClassFromCounts}{\code{NgsProjectClass$createLimmaVoomClassFromCounts()}}
+\item \href{#method-createLimmaVoomClassFromSalmon}{\code{NgsProjectClass$createLimmaVoomClassFromSalmon()}}
 \item \href{#method-clone}{\code{NgsProjectClass$clone()}}
 }
 }
@@ -148,6 +152,52 @@ getSamplesByGroup
 \subsection{Method \code{createDeseq2ClassFromSalmon()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createDeseq2ClassFromSalmon(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createEdgeRClassFromCounts"></a>}}
+\if{latex}{\out{\hypertarget{method-createEdgeRClassFromCounts}{}}}
+\subsection{Method \code{createEdgeRClassFromCounts()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createEdgeRClassFromCounts(
+  rnaseq,
+  groupcol,
+  outdir,
+  identifier = "ensembl_id"
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createEdgeRClassFromSalmon"></a>}}
+\if{latex}{\out{\hypertarget{method-createEdgeRClassFromSalmon}{}}}
+\subsection{Method \code{createEdgeRClassFromSalmon()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createEdgeRClassFromSalmon(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createLimmaVoomClassFromCounts"></a>}}
+\if{latex}{\out{\hypertarget{method-createLimmaVoomClassFromCounts}{}}}
+\subsection{Method \code{createLimmaVoomClassFromCounts()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createLimmaVoomClassFromCounts(
+  rnaseq,
+  groupcol,
+  outdir,
+  identifier = "ensembl_id"
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-createLimmaVoomClassFromSalmon"></a>}}
+\if{latex}{\out{\hypertarget{method-createLimmaVoomClassFromSalmon}{}}}
+\subsection{Method \code{createLimmaVoomClassFromSalmon()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{NgsProjectClass$createLimmaVoomClassFromSalmon(salmon, groupcol, outdir)}\if{html}{\out{</div>}}
 }
 
 }

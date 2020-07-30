@@ -17,17 +17,17 @@ LimmaVoomClass <- R6::R6Class("LimmaVoomClass",
 
   public = list(
 
-    project = NULL,
+    #project = NULL,
     samples = NULL,
     design = NULL,
     fit = NULL,
 
-    initialize = function(project, dge, groupcol, outdir)
+    initialize = function(dge, samples, outdir)
     {
       #samples <- salmon$project$getSamplesByGroup(groupcol)
       #salmon <- salmon$subset(samples=samples$name)
 
-      samples <- project$getSamplesByGroup(groupcol)
+      #samples <- project$getSamplesByGroup(groupcol)
 
       # https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
       #dge <- edgeR::DGEList(counts=salmon$txi$counts, group=samples$group)
@@ -52,7 +52,7 @@ LimmaVoomClass <- R6::R6Class("LimmaVoomClass",
       hlsgr::writeTable(tbl, outfile, row.names=TRUE)
 
       #self$salmon <- salmon
-      self$project <- project
+      #self$project <- project
       self$samples <- samples
       self$design <- design
       self$fit <- fit

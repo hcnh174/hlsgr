@@ -98,6 +98,8 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
       return(datTraits)
     },
 
+    ######################################
+
     createDeseq2ClassFromCounts = function(rnaseq, groupcol, outdir, identifier='ensembl_id')
     {
       countdata <- self$getCountsByGroup(rnaseq, groupcol)
@@ -125,6 +127,52 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
                                               design = design)
       deseq2 <- DeSeq2Class$new(dds, outdir)
       return(deseq2)
+    },
+
+    ##################################
+
+    createEdgeRClassFromCounts = function(rnaseq, groupcol, outdir, identifier='ensembl_id')
+    {
+      countdata <- self$getCountsByGroup(rnaseq, groupcol)
+
+      dge <- edgeR::DGEList(counts = countdata$counts, group = countdata$samples$group)
+
+      edger <- EdgeRClass$new(dge, outdir, identifier = identifier)
+      return(edger)
+    },
+
+    createEdgeRClassFromSalmon = function(salmon, groupcol, outdir)
+    {
+      samples <- self$getSamplesByGroup(groupcol)
+      salmon <- salmon$subset(samples = samples$name)
+
+      dge <- edgeR::DGEList(counts = salmon$txi$counts, group = samples$group)
+
+      edger <- EdgeRClass$new(dge, outdir)
+      return(edger)
+    },
+
+    ##################################
+
+    createLimmaVoomClassFromCounts = function(rnaseq, groupcol, outdir, identifier='ensembl_id')
+    {
+      countdata <- self$getCountsByGroup(rnaseq, groupcol)
+
+      dge <- edgeR::DGEList(counts = countdata$counts, group = countdata$samples$group)
+
+      edger <- LimmaVoomClass$new(dge, outdir)
+      return(edger)
+    },
+
+    createLimmaVoomClassFromSalmon = function(salmon, groupcol, outdir)
+    {
+      samples <- self$getSamplesByGroup(groupcol)
+      salmon <- salmon$subset(samples = samples$name)
+
+      dge <- edgeR::DGEList(counts = salmon$txi$counts, group=samples$group)
+
+      voom <- LimmaVoomClass$new(dge, outdir, identifier = identifier)
+      return(voom)
     }
    ),
 
@@ -136,7 +184,7 @@ NgsProjectClass <- R6::R6Class("NgsProjectClass",
        samples$name <- as.character(samples$name)
        samples$subject <- as.character(samples$subject)
        samples$sample <- samples$name
-       samples[samples==''] <- NA
+       samples[samples == ''] <- NA
        rownames(samples) <- samples$sample
        return(samples)
      },

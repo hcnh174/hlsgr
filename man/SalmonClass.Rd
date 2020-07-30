@@ -12,7 +12,10 @@ R6 class for importing salmon count data
 R6 class for importing salmon count data
 }
 \examples{
-project <- NgsProjectClass$new(projectdir)
+project <- SalmonClass$new(project, quantdir)
+}
+\section{Super classes}{
+\code{\link[hlsgr:AbstractBaseClass]{hlsgr::AbstractBaseClass}} -> \code{\link[hlsgr:RnaSeqCountDataClass]{hlsgr::RnaSeqCountDataClass}} -> \code{SalmonClass}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -22,6 +25,12 @@ project <- NgsProjectClass$new(projectdir)
 \item \href{#method-subset}{\code{SalmonClass$subset()}}
 \item \href{#method-clone}{\code{SalmonClass$clone()}}
 }
+}
+\if{html}{
+\out{<details open ><summary>Inherited methods</summary>}
+\itemize{
+}
+\out{</details>}
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}

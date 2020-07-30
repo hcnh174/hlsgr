@@ -27,7 +27,7 @@ DeSeq2Class <- R6::R6Class("DeSeq2Class",
     initialize = function(dds, outdir, identifier='ensembl_id')
     {
       super$initialize()
-      print(concat0('DeSeq2Class: outdir=', outdir, ' identifier=', identifier))
+      print(paste0('DeSeq2Class: outdir=', outdir, ' identifier=', identifier))
 
       # https://angus.readthedocs.io/en/2019/diff-ex-and-viz.html
       #dds <- DESeq2::DESeqDataSetFromTximport(txi = salmon$txi, colData = samples, design = design)
