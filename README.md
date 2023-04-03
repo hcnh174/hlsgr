@@ -23,7 +23,7 @@ install.packages('R.oo')
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("KEGGprofile", update=FALSE)
+#BiocManager::install("KEGGprofile", update=FALSE)
 BiocManager::install("biovizBase", update=FALSE)
 BiocManager::install("ggbio", update=FALSE)
 BiocManager::install("tximport", update=FALSE)
